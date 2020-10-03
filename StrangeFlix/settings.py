@@ -79,9 +79,13 @@ WSGI_APPLICATION = 'StrangeFlix.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'test',
+    'USER': 'postgres',
+    'PASSWORD': 'anurag',
+    'HOST':'localhost',
+    # 'PORT': '8000'
+}
 }
 
 
@@ -117,6 +121,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_REDIRECT_URL = 'home'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

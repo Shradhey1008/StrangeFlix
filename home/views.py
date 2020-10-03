@@ -6,9 +6,3 @@ def index(request):
 
 def strange(request):
     return render(request, 'index.html')
-
-def signup(request):
-    return render(request, 'signup.html')
-
-def verify(request):
-    return render(request,'verify.html')
