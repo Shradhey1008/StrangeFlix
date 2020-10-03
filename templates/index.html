@@ -1,20 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <!-- Title -->
-    <title>Video Mag - HTML Template for Video &amp; Magazine</title>
-
+    <title>StrangeFlix</title>
     <!-- Favicon -->
     <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -39,7 +34,8 @@
                     <div class="col-12 col-sm-4">
                         <!-- Logo Area -->
                         <div class="logo-area">
-                            <a href="index.html"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                            <a href="../"><h2 style="color:aliceblue;">StrangeFlix</h2></a>
+                            <a href="../"></a>
                         </div>
                     </div>
                     <div class="col-12 col-sm-8">
@@ -53,7 +49,7 @@
         </div>
 
         <!-- Navbar Area -->
-        <div class="videomag-main-menu" id="sticker">
+        <div class="videomag-main-menu" id="sticker" >
             <div class="classy-nav-container breakpoint-off">
                 <div class="container-fluid">
                     <!-- Menu -->
@@ -75,20 +71,49 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="video-post.html">Videos</a></li>
-                                    <li><a href="#">Pages</a>
+                                    <li class="active"><a href="/index">Home</a></li>
+                                    <li><a href="video-post.html">TV Shows</a></li>
+                                    <li><a href="catagory.html">Movies</a></li>
+                                    <!-- <li><a href="contact.html"></a></li> -->
+                                    <li><a href="#">My List</a>   
+                                        <!-- Anurag this content has to be dynamic for what were the latest things seen by the user -->
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="catagory.html">Catagory</a></li>
-                                            <li><a href="video-post.html">Video Post</a></li>
-                                            <li><a href="single-post.html">Single Post</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="index.html">Last Show</a></li>
+                                            <li><a href="catagory.html">Second Last</a></li>
+                                            <li><a href="video-post.html">Third Last</a></li>
+                                            <li><a href="single-post.html">Fourth Last</a></li>
+                                            <li><a href="contact.html">Fifth Last</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Features</a>
+                                    <li><a href="#">Explore</a>
                                         <div class="megamenu">
                                             <ul class="single-mega cn-col-4">
+                                               <h5>Bollywood</h5>
+                                                <li><a href="catagory.html">Catagory</a></li>
+                                                <li><a href="video-post.html">Video Post</a></li>
+                                                <li><a href="single-post.html">Single Post</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="catagory.html">Catagory</a></li>
+                                                <li><a href="video-post.html">Video Post</a></li>
+                                                <li><a href="single-post.html">Single Post</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <h5>Hollywood</h5>
+                                                <!-- <li><a href="index.html">Home</a></li> -->
+                                                <li><a href="catagory.html">Catagory</a></li>
+                                                <li><a href="video-post.html">Video Post</a></li>
+                                                <li><a href="single-post.html">Single Post</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="catagory.html">Catagory</a></li>
+                                                <li><a href="video-post.html">Video Post</a></li>
+                                                <li><a href="single-post.html">Single Post</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <h5>Kids Section</h5>
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="catagory.html">Catagory</a></li>
                                                 <li><a href="video-post.html">Video Post</a></li>
@@ -101,30 +126,7 @@
                                                 <li><a href="contact.html">Contact</a></li>
                                             </ul>
                                             <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagory</a></li>
-                                                <li><a href="video-post.html">Video Post</a></li>
-                                                <li><a href="single-post.html">Single Post</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagory</a></li>
-                                                <li><a href="video-post.html">Video Post</a></li>
-                                                <li><a href="single-post.html">Single Post</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagory</a></li>
-                                                <li><a href="video-post.html">Video Post</a></li>
-                                                <li><a href="single-post.html">Single Post</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagory</a></li>
-                                                <li><a href="video-post.html">Video Post</a></li>
-                                                <li><a href="single-post.html">Single Post</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
+                                                <h5>Regional</h5>
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="catagory.html">Catagory</a></li>
                                                 <li><a href="video-post.html">Video Post</a></li>
@@ -138,8 +140,8 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li><a href="catagory.html">Music</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <!-- Anurag, this has to be dynamic based on session of the user -->
+                                    <li class="active"><a href="/signup">Sign In</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->

@@ -146,7 +146,7 @@ img {
 
 /* :: 3.4.0 Preloader */
 .preloader {
-  background-color: #ff1662;
+  background-color: #010e28;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -212,10 +212,10 @@ img {
         font-size: 24px; } }
 
 .tooltip-inner {
-  background-color: #ff1662; }
+  background-color: #010e28; }
 
 .tooltip .arrow::before {
-  border-bottom-color: #ff1662; }
+  border-bottom-color: #010e28; }
 
 .bg-img {
   background-position: center center;
@@ -280,12 +280,12 @@ input:focus {
   transition-duration: 500ms;
   box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.15); }
   #scrollUp:hover, #scrollUp:focus {
-    background-color: #ff1662;
+    background-color: #010e28;
     color: #ffffff; }
 
 /* :: 3.7.0 videomag Button */
 .videomag-btn {
-  background-color: #ff1662;
+  background-color: #010e28;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   position: relative;
@@ -316,7 +316,7 @@ input:focus {
     z-index: 1;
     width: 100%;
     height: 130px;
-    background-color: #ff1662;
+    background-color:#680109;
     padding: 0 4%; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .header-area .top-header-area .logo-area {
@@ -327,34 +327,34 @@ input:focus {
   .header-area .videomag-main-menu {
     position: relative;
     width: 100%;
-    height: 90px; }
+    height: 50px; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .header-area .videomag-main-menu {
-        height: 70px; } }
+        height: 50px; } }
     @media only screen and (max-width: 767px) {
       .header-area .videomag-main-menu {
-        height: 70px; } }
+        height: 50px; } }
     .header-area .videomag-main-menu .classy-nav-container {
       background-color: #312e2e;
       border-top: 1px solid #ffffff;
       padding: 0 4%; }
       .header-area .videomag-main-menu .classy-nav-container .classy-navbar {
         background-color: #312e2e;
-        height: 90px;
+        height: 50px;
         padding: 0; }
         @media only screen and (min-width: 768px) and (max-width: 991px) {
           .header-area .videomag-main-menu .classy-nav-container .classy-navbar {
-            height: 70px; } }
+            height: 50px; } }
         @media only screen and (max-width: 767px) {
           .header-area .videomag-main-menu .classy-nav-container .classy-navbar {
-            height: 70px; } }
+            height: 50px; } }
         .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li a {
           font-weight: 500;
           text-transform: capitalize;
           font-size: 16px;
-          padding: 27px 25px;
+          padding: 0px 25px;
           color: #ffffff;
-          height: 90px; }
+          height: 40px; }
           @media only screen and (min-width: 992px) and (max-width: 1199px) {
             .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li a {
               font-size: 14px;
@@ -370,9 +370,9 @@ input:focus {
               font-size: 14px;
               padding: 0 20px;
               height: 35px;
-              color: #282828; } }
+              color: #680109; } }
           .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li a:hover, .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li a:focus {
-            background-color: #e10735;
+            background-color:  #680109;
             color: #ffffff; }
         .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li ul li a {
           color: #404040;
@@ -380,27 +380,27 @@ input:focus {
           padding: 0 25px;
           height: 35px; }
         .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav > ul > li.active a {
-          background-color: #e10735;
+          background-color:  #680109;
           color: #ffffff; }
           @media only screen and (min-width: 768px) and (max-width: 991px) {
             .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav > ul > li.active a {
               background-color: #ffffff;
-              color: #282828; } }
+              color: #680109; } }
           @media only screen and (max-width: 767px) {
             .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav > ul > li.active a {
               background-color: #ffffff;
-              color: #282828; } }
+              color: #680109; } }
         .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li.megamenu-item > a::after,
         .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li.has-down > a::after {
           color: #ffffff; }
           @media only screen and (min-width: 768px) and (max-width: 991px) {
             .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li.megamenu-item > a::after,
             .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li.has-down > a::after {
-              color: #282828; } }
+              color:#680109; } }
           @media only screen and (max-width: 767px) {
             .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li.megamenu-item > a::after,
             .header-area .videomag-main-menu .classy-nav-container .classy-navbar .classynav ul li.has-down > a::after {
-              color: #282828; } }
+              color: #680109; } }
     .header-area .videomag-main-menu .top-search-area {
       position: relative;
       z-index: 1; }
@@ -430,7 +430,7 @@ input:focus {
           padding: 0 30px;
           border-bottom: 2px solid transparent; }
           .header-area .videomag-main-menu .top-search-area form input:focus {
-            border-bottom-color: #ff1662; }
+            border-bottom-color:#680109; }
         .header-area .videomag-main-menu .top-search-area form button {
           position: absolute;
           width: 40px;
@@ -444,7 +444,7 @@ input:focus {
           cursor: pointer;
           color: #ffffff; }
           .header-area .videomag-main-menu .top-search-area form button:hover {
-            color: #ff1662; }
+            color: #010e28; }
   .header-area .is-sticky .videomag-main-menu {
     z-index: 9999;
     box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2); }
@@ -493,7 +493,7 @@ input:focus {
 .hero-area {
   position: relative;
   z-index: 1;
-  background-color: #edf1f4;
+  background-color: ;
   padding: 5px; }
   .hero-area .hero-single-section {
     position: relative;
@@ -587,7 +587,7 @@ input:focus {
   .video-play-btn:hover, .video-play-btn:focus {
     color: #ffffff;
     font-size: 30px;
-    background-color: #ff1662;
+    background-color: #010e28;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2); }
   .video-play-btn.style2 {
     width: 58px;
@@ -616,7 +616,7 @@ input:focus {
     font-weight: 700;
     margin-bottom: 5px; }
     .single-blog-post .blog-content .post-tag:hover, .single-blog-post .blog-content .post-tag:focus {
-      color: #ff1662; }
+      color: #010e28; }
     @media only screen and (max-width: 767px) {
       .single-blog-post .blog-content .post-tag {
         font-size: 10px; } }
@@ -636,7 +636,7 @@ input:focus {
       .single-blog-post .blog-content .post-title {
         font-size: 16px; } }
     .single-blog-post .blog-content .post-title:hover, .single-blog-post .blog-content .post-title:focus {
-      color: #ff1662; }
+      color:  #010e28; }
   .single-blog-post .blog-content .post-meta {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -665,7 +665,7 @@ input:focus {
       .single-blog-post .blog-content .post-meta a:last-child {
         margin-right: 0; }
       .single-blog-post .blog-content .post-meta a:hover, .single-blog-post .blog-content .post-meta a:focus {
-        color: #ff1662; }
+        color:  #010e28; }
   .single-blog-post.white .blog-content .post-title,
   .single-blog-post.white .blog-content .post-tag,
   .single-blog-post.white .blog-content .post-meta a {
@@ -675,7 +675,7 @@ input:focus {
     .single-blog-post.white .blog-content .post-tag:focus,
     .single-blog-post.white .blog-content .post-meta a:hover,
     .single-blog-post.white .blog-content .post-meta a:focus {
-      color: #ff1662; }
+      color:  #010e28; }
   .single-blog-post.style2 .blog-content .post-title {
     font-size: 24px; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -753,7 +753,7 @@ input:focus {
       padding: 0;
       margin-right: 20px; }
       .video-mag-tabs-area .nav-tabs .nav-item .nav-link.active {
-        color: #ff1662; }
+        color:  #010e28; }
   .video-mag-tabs-area .tab-content {
     padding: 75px 0;
     position: relative;
@@ -764,12 +764,12 @@ input:focus {
     .video-mag-tabs-area .tab-content .owl-carousel .owl-next {
       width: 42px;
       height: 35px;
-      background-color: #edf1f4;
+      background-color: #282828;
       position: absolute;
       top: -148px;
       right: 0;
       font-size: 18px;
-      color: #a5a5a5;
+      color: #282828;
       line-height: 35px;
       text-align: center;
       -webkit-transition-duration: 500ms;
@@ -778,7 +778,7 @@ input:focus {
       .video-mag-tabs-area .tab-content .owl-carousel .owl-prev:hover, .video-mag-tabs-area .tab-content .owl-carousel .owl-prev:focus,
       .video-mag-tabs-area .tab-content .owl-carousel .owl-next:hover,
       .video-mag-tabs-area .tab-content .owl-carousel .owl-next:focus {
-        background-color: #ff1662;
+        background-color:  #010e28;
         color: #ffffff; }
     .video-mag-tabs-area .tab-content .owl-carousel .owl-prev {
       right: 57px; }
@@ -830,7 +830,7 @@ input:focus {
       top: -10px;
       right: -10px; }
       .video-content-area .add-banner1 .close-btn:hover {
-        background-color: #ff1662;
+        background-color:  #010e28;
         color: #ffffff; }
   .video-content-area .add-banner2 {
     position: absolute;
@@ -859,7 +859,7 @@ input:focus {
       top: -10px;
       right: -10px; }
       .video-content-area .add-banner2 .close-btn:hover {
-        background-color: #ff1662;
+        background-color:  #010e28;
         color: #ffffff; }
 
 .pagination .page-item .page-link {
@@ -877,13 +877,13 @@ input:focus {
   margin-right: 5px;
   border: 1px solid #dcdcdc; }
   .pagination .page-item .page-link:hover, .pagination .page-item .page-link:focus {
-    background-color: #ff1662;
+    background-color: #010e28;
     color: #ffffff;
-    border-color: #ff1662; }
+    border-color: #010e28; }
 .pagination .page-item.active .page-link {
-  background-color: #ff1662;
+  background-color: #010e28;
   color: #ffffff;
-  border-color: #ff1662; }
+  border-color: #010e28; }
 
 /* :: 6.0 Footer Area CSS */
 .footer-area {
@@ -928,7 +928,7 @@ input:focus {
         color: #ffffff;
         line-height: 46px; }
         .footer-area .footer-content .footer-social-info a:hover, .footer-area .footer-content .footer-social-info a:focus {
-          background-color: #ff1662; }
+          background-color:  #010e28; }
   .footer-area .footer-nav {
     position: relative;
     z-index: 1;
@@ -945,7 +945,7 @@ input:focus {
         font-size: 14px;
         color: #6a6a6a; }
         .footer-area .footer-nav ul li a:hover, .footer-area .footer-nav ul li a:focus {
-          color: #ff1662; }
+          color:  #010e28; }
   .footer-area .video-catagory {
     position: relative;
     z-index: 1;
@@ -973,7 +973,7 @@ input:focus {
         .footer-area .video-catagory ul li a {
           padding: 0 15px; } }
       .footer-area .video-catagory ul li a:hover, .footer-area .video-catagory ul li a:focus {
-        background-color: #ff1662; }
+        background-color:  #010e28; }
     .footer-area .video-catagory ul li:last-child a {
       margin-bottom: 0; }
   .footer-area .copywrite-text {
@@ -986,7 +986,7 @@ input:focus {
       font-size: 12px;
       font-weight: 400; }
       .footer-area .copywrite-text a:hover, .footer-area .copywrite-text a:focus {
-        color: #ff1662; }
+        color: #010e28; }
 
 .mfp-iframe-holder .mfp-close {
   color: #ffffff;
@@ -996,7 +996,7 @@ input:focus {
   top: 0;
   width: 36px;
   height: 36px;
-  background-color: #ff1662;
+  background-color: #010e28;
   line-height: 36px; }
 
 .sidebar-area {
@@ -1083,7 +1083,7 @@ input:focus {
       .comment_area .comment-content .comment-meta .post-author:hover,
       .comment_area .comment-content .comment-meta .post-date:hover,
       .comment_area .comment-content .comment-meta .reply:hover {
-        color: #ff1662; }
+        color:  #010e28; }
     .comment_area .comment-content .comment-meta .reply {
       margin-right: 0; }
       .comment_area .comment-content .comment-meta .reply::after {
@@ -1130,7 +1130,7 @@ input:focus {
   font-size: 14px;
   color: #000000; }
   .contact-social-info a:hover, .contact-social-info a:focus {
-    color: #ff1662; }
+    color:  #010e28; }
 
 .single-contact-info {
   position: relative;
@@ -1144,7 +1144,7 @@ input:focus {
     max-width: 42px;
     width: 42px;
     height: 42px;
-    background-color: #ff1662;
+    background-color:  #010e28;
     text-align: center;
     line-height: 42px; }
   .single-contact-info p {
