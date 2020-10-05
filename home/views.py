@@ -6,3 +6,9 @@ def index(request):
 
 def strange(request):
     return render(request, 'index.html')
+
+def profile(request):
+    return render(request, 'profile.html')
+
+def pay(request):
+    return render(request,'pay.html')

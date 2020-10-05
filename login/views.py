@@ -8,8 +8,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 def login_page(request):
     return render(request,'signin.html')
 
-def verify(request):
-    return render(request,'verify.html')
+# def verify(request):
+    # return render(request,'verify.html')
+
 
 
 def user_login(request):

@@ -5,6 +5,12 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 
+def signup(request):
+    return render(request,'signup.html')
+
+def verify(request):
+    return render(request,'verify.html')
+
 def users_signup(request):
     if request.method == 'POST':
         email = request.POST.get('email')
