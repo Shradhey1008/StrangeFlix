@@ -90,7 +90,7 @@
                                     </li>
                                     <li><a href="#">Explore</a>
                                         <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
+                                            <ul class="single-mega cn-col-3">
                                                 <h5>Bollywood</h5>
                                                 <li><a href="catagory.html">Catagory</a></li>
                                                 <li><a href="video-post.html">Video Post</a></li>
@@ -102,7 +102,7 @@
                                                 <li><a href="single-post.html">Single Post</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
                                             </ul>
-                                            <ul class="single-mega cn-col-4">
+                                            <ul class="single-mega cn-col-3">
                                                 <h5>Hollywood</h5>
                                                 <!-- <li><a href="index.html">Home</a></li> -->
                                                 <li><a href="catagory.html">Catagory</a></li>
@@ -115,7 +115,7 @@
                                                 <li><a href="single-post.html">Single Post</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
                                             </ul>
-                                            <ul class="single-mega cn-col-4">
+                                            <ul class="single-mega cn-col-3">
                                                 <h5>Kids Section</h5>
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="catagory.html">Catagory</a></li>
@@ -127,20 +127,7 @@
                                                 <li><a href="video-post.html">Video Post</a></li>
                                                 <li><a href="single-post.html">Single Post</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <h5>Regional</h5>
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagory</a></li>
-                                                <li><a href="video-post.html">Video Post</a></li>
-                                                <li><a href="single-post.html">Single Post</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagory</a></li>
-                                                <li><a href="video-post.html">Video Post</a></li>
-                                                <li><a href="single-post.html">Single Post</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
+                                            </ul>   
                                         </div>
                                     </li>
                                     <!-- Anurag, this has to be dynamic based on session of the user -->
@@ -189,10 +176,10 @@
                             <a href="#" class="post-tag">Featured</a>
                             <a href="#" class="post-title">Watch a tiny cat taking a bath</a>
                             <div class="post-meta">
-                                <a href="#"><img src="img/core-img/author.png" alt=""> By James Smith</a>
-                                <a href="#"><img src="img/core-img/calender.png" alt=""> July 23, 2018</a>
-                                <a href="#"><img src="img/core-img/chat.png" alt=""> 5</a>
-                                <a href="#"><img src="img/core-img/like.png" alt=""> 12k</a>
+                                <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                             </div>
                         </div>
                     </div>
@@ -212,10 +199,10 @@
                             <a href="#" class="post-tag">Featured</a>
                             <a href="#" class="post-title">Spain: Take a virtual tour</a>
                             <div class="post-meta">
-                                <a href="#"><img src="img/core-img/author.png" alt=""> By James Smith</a>
-                                <a href="#"><img src="img/core-img/calender.png" alt=""> July 23, 2018</a>
-                                <a href="#"><img src="img/core-img/chat.png" alt=""> 5</a>
-                                <a href="#"><img src="img/core-img/like.png" alt=""> 12k</a>
+                                <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                             </div>
                         </div>
                     </div>
@@ -293,10 +280,11 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Vacation Blog: Ibiza</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -313,10 +301,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Top Video Games</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -333,10 +321,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">July Fails</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -353,10 +341,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Vacation Blog: Ibiza</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -373,10 +361,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Top Video Games</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -393,10 +381,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">July Fails</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -418,10 +406,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Vacation Blog: Ibiza</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -438,10 +426,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Top Video Games</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -458,10 +446,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">July Fails</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -478,10 +466,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Vacation Blog: Ibiza</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -498,10 +486,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Top Video Games</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -518,10 +506,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">July Fails</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -543,10 +531,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Vacation Blog: Ibiza</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -563,10 +551,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Top Video Games</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -583,10 +571,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">July Fails</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -603,10 +591,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Vacation Blog: Ibiza</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -623,10 +611,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Top Video Games</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -643,10 +631,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">July Fails</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -687,10 +675,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Watch a tiny cat taking a bath</a>
                                         <div class="post-meta">
-                                            <a href="#"><img src="img/core-img/author.png" alt=""> By James Smith</a>
-                                            <a href="#"><img src="img/core-img/calender.png" alt=""> July 23, 2018</a>
-                                            <a href="#"><img src="img/core-img/chat.png" alt=""> 5</a>
-                                            <a href="#"><img src="img/core-img/like.png" alt=""> 12k</a>
+                                            <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                            <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                         </div>
                                     </div>
                                 </div>
@@ -714,10 +702,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">New York Trip</a>
                                         <div class="post-meta d-flex justify-content-between">
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calendar2.png' %}" alt=""> July 23, 2018</a>
                                             <div class="d-flex">
-                                                <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                                <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                                <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                                <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                             </div>
                                         </div>
                                     </div>
@@ -737,10 +725,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Coffee in Paris</a>
                                         <div class="post-meta d-flex justify-content-between">
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calendar2.png' %}" alt=""> July 23, 2018</a>
                                             <div class="d-flex">
-                                                <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                                <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                                <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                                <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                             </div>
                                         </div>
                                     </div>
@@ -760,10 +748,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Summer Holiday</a>
                                         <div class="post-meta d-flex justify-content-between">
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calendar2.png' %}" alt=""> July 23, 2018</a>
                                             <div class="d-flex">
-                                                <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                                <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                                <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                                <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                             </div>
                                         </div>
                                     </div>
@@ -783,10 +771,10 @@
                                         <a href="#" class="post-tag">Featured</a>
                                         <a href="#" class="post-title">Discover the islands</a>
                                         <div class="post-meta d-flex justify-content-between">
-                                            <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
+                                            <a href="#"><img src="{% static 'img/core-img/calendar2.png' %}" alt=""> July 23, 2018</a>
                                             <div class="d-flex">
-                                                <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                                <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                                <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                                <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                             </div>
                                         </div>
                                     </div>
@@ -824,10 +812,10 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">Vacation Blog: Ibiza</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                    <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                    <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -843,8 +831,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">Fashion Week 2018 -Spring/summer</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -860,8 +848,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">2018 Summer shoes Collection</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -877,8 +865,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">The New Collection of Dior</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -903,10 +891,10 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">New Iphone release</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
-                                    <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/author.png' %}" alt=""> By James Smith</a>
+                                    <a href="#"><img src="{% static 'img/core-img/calender.png' %}" alt=""> July 23, 2018</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -922,8 +910,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">Fashion Week 2018 -Spring/summer</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -939,8 +927,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">2018 Summer shoes Collection</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -956,8 +944,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">The New Collection of Dior</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -981,8 +969,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">Fashion Week 2018 -Spring/summer</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -998,8 +986,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">2018 Summer shoes Collection</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -1015,8 +1003,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">The New Collection of Dior</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -1032,8 +1020,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">Fashion Week 2018 -Spring/summer</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -1049,8 +1037,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">2018 Summer shoes Collection</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -1066,8 +1054,8 @@
                                 <a href="#" class="post-tag">Featured</a>
                                 <a href="#" class="post-title">The New Collection of Dior</a>
                                 <div class="post-meta">
-                                    <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
-                                    <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                                    <a href="#"><img src="{% static 'img/core-img/chat2.png' %}" alt=""> 5</a>
+                                    <a href="#"><img src="{% static 'img/core-img/like2.png' %}" alt=""> 12k</a>
                                 </div>
                             </div>
                         </div>
@@ -1096,9 +1084,7 @@
                     <div class="footer-content">
                         <!-- Logo -->
                         <a href="index.html" class="foo-logo"><img src="img/core-img/logo.png" alt=""></a>
-                        <p>Donec cursus eros et risus scelerisque, sit amet ultrices arcu scelerisque. Sed consequat
-                            fermentum turpis, vulputate maximus.Donec cursus eros et risus scelerisque, sit amet
-                            ultrices arcu scelerisque. Sed consequat fermentum turpis, vulputate maximus</p>
+                        <p>This is our footer area</p>
                         <div class="footer-social-info d-flex">
                             <a href="#"><i class="fa fa-pinterest"></i></a>
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -1144,10 +1130,10 @@
                         <div class="video-catagory">
                             <h5 class="widget-title">Video Categories</h5>
                             <ul>
-                                <li><a href="#"><span>Travel</span> <span>20</span></a></li>
-                                <li><a href="#"><span>Technology</span> <span>10</span></a></li>
-                                <li><a href="#"><span>Fashion</span> <span>71</span></a></li>
-                                <li><a href="#"><span>Animals</span> <span>15</span></a></li>
+                                <li><a href="#"><span>Action</span> <span>20</span></a></li>
+                                <li><a href="#"><span>Drama</span> <span>10</span></a></li>
+                                <li><a href="#"><span>Adventure</span> <span>71</span></a></li>
+                                <li><a href="#"><span>Mystery</span> <span>15</span></a></li>
                             </ul>
                         </div>
                     </div>
