@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'cloudinary',
     'home',
     'login',
     'signup',
@@ -90,7 +92,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'test',
     'USER': 'postgres',
-    'PASSWORD': 'Smtwtfss1@',
+    'PASSWORD': 'pasword',
     'HOST':'localhost',
 }
 }
