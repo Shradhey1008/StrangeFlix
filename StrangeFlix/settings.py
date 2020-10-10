@@ -32,17 +32,28 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'allauth',
     'django.contrib.admin',
+    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
 
     'cloudinary',
+=======
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+>>>>>>> e1855fd46ab91e5164918bb4981c1c49faae725c
     'home',
     'login',
     'signup',
+    'embed_video',
+    'videoplayer',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -92,8 +104,14 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'test',
     'USER': 'postgres',
+<<<<<<< HEAD
     'PASSWORD': 'pasword',
     'HOST':'localhost',
+=======
+    # 'PASSWORD': 'Smtwtfss1@',
+    'PASSWORD': 'anurag',
+    'HOST': 'localhost',
+>>>>>>> e1855fd46ab91e5164918bb4981c1c49faae725c
 }
 }
 
@@ -116,6 +134,37 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    },
+    'facebook':
+       {'METHOD': 'oauth2',
+        'SCOPE': ['email','public_profile'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'FIELDS': [
+            'id',
+            'email',
+            'name',
+            'first_name',
+            'last_name',
+            'verified',
+            'locale',
+            'timezone',
+            'link',
+            'gender',
+            'updated_time'],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': lambda request: 'kr_KR',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v2.4'}
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -130,7 +179,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = '/'
+SITE_ID = 1
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
@@ -142,3 +192,11 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+AUTHENTICATION_BACKENDS = (
+ 'django.contrib.auth.backends.ModelBackend',
+ 'allauth.account.auth_backends.AuthenticationBackend',
+ )

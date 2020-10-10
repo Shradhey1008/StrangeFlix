@@ -122,12 +122,14 @@
  </div>
 <body>
     
-<form autocomplete='off' method="POST" class='form form-signin'> {% csrf_token %}
+<form autocomplete='off' method="POST" class='form form-signin'> 
+  {% csrf_token %}
   <div class='control block-cube block-input'>
     <h1 style="color: aliceblue;">
       Sign In
     </h1>
   </div>
+  <label for="username">Username:</label>
   <div class='control block-cube block-input'>
     <input name='username' placeholder='username' type='username' required>
     <div class='bg-top'>
@@ -140,6 +142,7 @@
       <div class='bg-inner'></div>
     </div>
   </div>
+  <label for="password">Password:</label>
   <div class='control block-cube block-input'>
     <input name='password' placeholder='password' type='password' required>
     <div class='bg-top'>
