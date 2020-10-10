@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.users_signup, name='signup'),
-    path('signup/',views.signup,name="signup"),
-    path('signup/verify/',views.verify,name="verify"),
+    # path('signup/',views.users_signup,name="signup"),
+    path('verify/',views.otp_verification,name="verify"),
 ]
