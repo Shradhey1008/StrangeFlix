@@ -1,49 +1,42 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login,logout
+from django.contrib.auth.decorators import login_required
+from .forms import UserRegisterForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.core.mail import send_mail, EmailMultiAlternatives
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, logout,login
+from django.template import Context
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib import messages
+import requests
+from django.http import JsonResponse
 
 # Create your views here.
 
+
 def login_page(request):
-    return render(request,'signin.html')
-
-# def verify(request):
-    # return render(request,'verify.html')
+    return render(request, 'signin.html')
 
 
+# funtion to authenticate user in the database
 
 def user_login(request):
     if request.method == "POST":
-        email = request.POST.get('email')
-        password = request.POST.get('password1')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
         # password = request.POST.get('password2')
-        user = authenticate(username=email, password=password)
+        user = authenticate(request, username=username, password=password)
         if user:
-            login(request,user)
-            return HttpResponseRedirect('/users/home')
+            login(request, user)
+            messages.success(request, f' wecome {username} !!')
+            return HttpResponseRedirect("/")
         else:
             error = " Sorry! Email and Password didn't match, Please try again ! "
-            return render(request, 'signin.html',{'error':error})
+            return render(request, 'signin.html', {'error': error})
     else:
         return render(request, 'signin.html')
 
 
-def users_signup(request):
-    if request.method == 'POST':
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        pass_1 = request.POST.get('password1')
-        pass_2 = request.POST.get('password2')
-        if pass_1 == pass_2:
-             user = User.objects.create_user(
-                                              username=phone,
-                                              email=email,
-                                              password=pass_1,
-                                             )
-             return HttpResponseRedirect("/")
-        else:
-             error = " Password Mismatch "
-             return render(request, 'login/signup.html',{"error":error})
-    else:
-         return render(request, 'login/signup.html')
+
+
+

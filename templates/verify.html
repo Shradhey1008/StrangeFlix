@@ -47,7 +47,8 @@
 		   </div>
 		</div>
    </div>
-   <form autocomplete='off'  class='form form-signin'> 
+   <form autocomplete='off'  class='form form-signin' method ='POST' action="{% url 'verify' %}">
+     {% csrf_token %} 
     <div class='control'>
       <h1>
         Verify OTP
