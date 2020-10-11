@@ -1,13 +1,8 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
 {% load socialaccount %}
 {% providers_media_js %}
-<html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp - StrangeFlix</title>
+     {% block head %}
     <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
 
@@ -15,8 +10,6 @@
     <link rel="stylesheet" href="{% static 'css/signup.css' %}">
     <link rel="stylesheet" href="{% static 'css/verify.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -103,9 +96,11 @@
   background: #E74B37;
 }
     </style>
-   
-   
-</head>
+{% endblock %}   
+   {% block title %}
+   Sign Up
+   {% endblock %}
+{% block content %}
 <div class="preloader d-flex align-items-center justify-content-center">
   <div class="spinner">
       <div class="double-bounce1"></div>
@@ -238,8 +233,7 @@
     <script src="{% static 'js/plugins/plugins.js'%}"></script>
    
     <script src="{% static 'js/active.js'%}"></script>
-</body>
-</html>
+{% endblock %}
 
 
 

@@ -22,7 +22,7 @@ def upload(request):
 
     lastvideo= Video.objects.last()
 
-    videofile= lastvideo.videofile
+    videofile = lastvideo.videofile
 
 
     form= VideoForm(request.POST or None, request.FILES or None)
@@ -30,9 +30,9 @@ def upload(request):
         form.save()
 
         
-    # context= {'videofile': videofile,
-    #         'form': form
-    #         }
+    context= {'videofile': videofile,
+            'form': form
+            }
     # context= {
     #         'form': form
     #         }

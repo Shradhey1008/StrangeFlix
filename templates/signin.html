@@ -1,11 +1,8 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html lang="en">
-<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignIn - StrangeFlix</title>
+    
+    {% block head %}
     <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
 
@@ -15,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -103,8 +100,10 @@
   background: #E74B37;
 }
     </style>
-   
-</head>
+{% endblock %}
+
+{% block title %}  Sign In {% endblock %}
+{% block content %}
 <div class="preloader d-flex align-items-center justify-content-center">
   <div class="spinner">
       <div class="double-bounce1"></div>
@@ -209,8 +208,7 @@
     <script src="{% static 'js/active.js'%}"></script>
     <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-</body>
-</html>
+{% endblock %}
 
 
 

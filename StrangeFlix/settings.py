@@ -40,15 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
 
     'cloudinary',
-=======
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
->>>>>>> e1855fd46ab91e5164918bb4981c1c49faae725c
     'home',
     'login',
     'signup',
@@ -104,14 +101,9 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'test',
     'USER': 'postgres',
-<<<<<<< HEAD
     'PASSWORD': 'pasword',
     'HOST':'localhost',
-=======
     # 'PASSWORD': 'Smtwtfss1@',
-    'PASSWORD': 'anurag',
-    'HOST': 'localhost',
->>>>>>> e1855fd46ab91e5164918bb4981c1c49faae725c
 }
 }
 
