@@ -20,17 +20,22 @@ def video(request):
 
 def upload(request):
 
-    lastvideo= Video.objects.last()
+    videofiles= Video.objects.all()
 
-    videofile = lastvideo.videofile
-
+    # videofile = lastvideo.videofile
+    print(videofiles)
 
     form= VideoForm(request.POST or None, request.FILES or None)
+    # print(Video.objects.filter(videofile=form.cleaned_data['videofile']).exists())
     if form.is_valid():
-        form.save()
+        if Video.objects.filter(name=request.POST.get('name')).exists():
+            pass
+        else:
+            form.save()
+        
 
         
-    context= {'videofile': videofile,
+    context= {'videofile': videofiles,
             'form': form
             }
     # context= {

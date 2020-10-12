@@ -17,8 +17,8 @@
       <form method='POST' action='{% url "video" %}'>
         {% csrf_token %}
         <input name='link' id="link" placeholder='Link' type='url' required>
-        <input type="file" name="document">
-        <button class="btn" type="submit">Submit</button>
+        <!-- <input type="file" name="document"> -->
+        <button class="btn btn-success" type="submit">Submit</button>
       </form>
     </div>
     

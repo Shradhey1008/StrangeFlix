@@ -27,7 +27,7 @@ urlpatterns = [
     path('signup/',include('signup.urls'), name = 'signup'),
     path('logout/', auth.LogoutView.as_view(template_name ='index.html'), name ='logout'),
     path('accounts/', include('allauth.urls')),
-    path('video/',include('videoplayer.urls')),
+    path('video/',include('videoplayer.urls'),name='videoplayer'),
 ]
 
 if settings.DEBUG:

@@ -8,7 +8,7 @@ def index(request):
 def strange(request):
     return render(request, 'index.html')
 
-@login_required
+# @login_required
 def profile(request):
     return render(request, 'profile.html')
 
