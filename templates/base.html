@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %} " type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body>
+  <!-- Preloader -->
+   <!-- <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+  </div>  -->
+      {% if messages %}
+        <div>
+          <strong>Messages:</strong>
+          <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+  <!-- Top red main header -->
+  <div class="header-area">
+    <div class="top-header-area">
+      <div class="container-fluid h-100">
+          <div class="row h-100 align-items-center">
+              <div class="col-12 col-sm-4">
+                  <!-- Logo Area -->
+                  <div class="logo-area">
+                      <a href="../">
+                          <h2 style="color:rgb(249, 251, 252);">StrangeFlix</h2>
+                      </a>
+                      <!-- <a href="../"></a> -->
+                  </div>
+              </div>
+              <div class="col-12 col-sm-8">
+                  <!-- Top Add Area -->
+                  <div class="top-add-area text-right">
+                      <a href="#"><img src="img/bg-img/add.png" alt=""></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Top red main header close -->
+</div>
+
+
+        
+    {% block body %}
+
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+
+
+  <!-- ##### Footer Area Start ##### -->  
+    <footer class="footer-area section-padding-100">
+      <div class="container-fluid">
+          <div class="row justify-content-between">
+              <!-- Footer Content -->
+              <div class="col-12 col-lg-4">
+                  <div class="footer-content">
+                      <!-- Logo -->
+                      <a href="index.html" class="foo-logo"><img src="img/core-img/logo.png" alt=""></a>
+                      <p>This is our footer area</p>
+                      <div class="footer-social-info d-flex">
+                          <a href="#"><i class="fa fa-pinterest"></i></a>
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                          <a href="#"><i class="fa fa-dribbble"></i></a>
+                          <a href="#"><i class="fa fa-behance"></i></a>
+                          <a href="#"><i class="fa fa-linkedin"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Footer Content -->
+              <div class="col-12 col-lg-7 col-xl-6">
+                  <div class="footer-content d-flex flex-wrap">
+                      <!-- Footer Nav -->
+                      <div class="footer-nav">
+                          <h5 class="widget-title">Usefull Links</h5>
+                          <nav>
+                              <ul>
+                                  <li><a href="#">About us</a></li>
+                                  <li><a href="#">Travel</a></li>
+                                  <li><a href="#">Games</a></li>
+                                  <li><a href="#">Categories</a></li>
+                                  <li><a href="#">Testimonials</a></li>
+                              </ul>
+                          </nav>
+                      </div>
+
+                      <!-- Footer Nav -->
+                      <div class="footer-nav">
+                          <h5 class="widget-title">About Us</h5>
+                          <nav>
+                              <ul>
+                                  <li><a href="#">Contact Us</a></li>
+                                  <li><a href="#">Jobs</a></li>
+                                  <li><a href="#">Terms</a></li>
+                                  <li><a href="#">Conditions</a></li>
+                                  <li><a href="#">About</a></li>
+                              </ul>
+                          </nav>
+                      </div>
+
+                      <!-- Video Catagory -->
+                      <div class="video-catagory">
+                          <h5 class="widget-title">Video Categories</h5>
+                          <ul>
+                              <li><a href="#"><span>Action</span> <span>20</span></a></li>
+                              <li><a href="#"><span>Drama</span> <span>10</span></a></li>
+                              <li><a href="#"><span>Adventure</span> <span>71</span></a></li>
+                              <li><a href="#"><span>Mystery</span> <span>15</span></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- ##### Footer Area End ##### -->
+
+  <!-- ##### All Javascript Script ##### -->
+  <!-- jQuery-2.2.4 js -->
+  <script src="{% static 'js/jquery/jquery-2.2.4.min.js'%}"></script>
+  <!-- Popper js -->
+  <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'js/bootstrap/bootstrap.min.js'%}"></script>
+  <!-- All Plugins js -->
+  <script src="{% static 'js/plugins/plugins.js'%}"></script>
+  <!-- Active js -->
+  <script src="{% static 'js/active.js'%}"></script>
+
+
+  </body>
+</html>
