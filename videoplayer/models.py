@@ -1,4 +1,5 @@
 from django.db import models
+from taggit.managers import TaggableManager
 from embed_video.fields import EmbedVideoField
 
 class Item(models.Model):
@@ -6,13 +7,17 @@ class Item(models.Model):
     # upload = models.FieldFile(upload_to='videos/', null=True, verbose_name="")
 
 
-class Video(models.Model):
-    name= models.CharField(max_length=500)
+class DeviceVideo(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=200)
+    thumbnail = models.ImageField(upload_to='thumbnail/')
     videofile= models.FileField(upload_to='videos/', null=True, verbose_name="")
+    tags = TaggableManager()
+    slug = models.SlugField(unique=True,max_length=100)
+
 
     def __str__(self):
-        return self.name + ": " + str(self.videofile)
-    # class Meta:
-    #     verbose_name = 'video'
-    #     verbose_name_plural = 'videos'
+        return self.title
+
+    
          

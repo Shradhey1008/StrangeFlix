@@ -25,10 +25,10 @@ urlpatterns = [
     path('',include('home.urls'),name = 'home'),
     path('login/',include('login.urls'), name = 'signin'),
     path('signup/',include('signup.urls'), name = 'signup'),
-    path('logout/', auth.LogoutView.as_view(template_name ='index.html'), name ='logout'),
     path('accounts/', include('allauth.urls')),
-    path('video/',include('videoplayer.urls'),name='videoplayer'),
+    path('uploads/',include('videoplayer.urls'),name='videoplayer'),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

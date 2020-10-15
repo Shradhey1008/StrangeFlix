@@ -1,8 +1,8 @@
 from django import forms 
-from .models import Video
+from .models import DeviceVideo
 
 # Creating new table in database as Video form
-class VideoForm(forms.ModelForm):
+class DeviceVideoForm(forms.ModelForm):
     class Meta:
-        model= Video
-        fields= ["name", "videofile"]
+        model= DeviceVideo
+        fields= ["title",'description', "videofile",'thumbnail','tags']
