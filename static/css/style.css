@@ -132,8 +132,8 @@ img {
 
 /* :: 3.3.0 Section Padding */
 .section-padding-100 {
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-top: 40px;
+  padding-bottom: 0px; }
 
 .section-padding-100-0 {
   padding-top: 100px;
@@ -893,8 +893,8 @@ input:focus {
   position: relative;
   z-index: 1;
   background-color: #02163f;
-  padding-left: 4%;
-  padding-right: 4%; }
+  padding-left: 2%;
+  padding-right: 2%; }
   .footer-area .widget-title {
     display: block;
     margin-bottom: 30px;
