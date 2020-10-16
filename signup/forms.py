@@ -19,7 +19,7 @@ class UserRegisterForm(UserCreationForm):
 
 
 class SimpleSignupForm(SignupForm):
-    phone = forms.CharField(max_length=12, label='Phone Number')
+    phone = forms.CharField(max_length=12, label='Phone Number', widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
     def save(self, request):
         user = super(SimpleSignupForm, self).save(request)
         user.phone = self.cleaned_data['phone']

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Item, DeviceVideo
+from .models import DeviceVideo,YTvideos
 from django.core.files.storage import FileSystemStorage
 from .forms import DeviceVideoForm
 from pytube import YouTube
@@ -70,11 +70,8 @@ def youtube_search(request):
         yt = YouTube(video_url)
         thumbnail_url = yt.thumbnail_url
         title = yt.title
-        length = yt.length
         desc = yt.description
-        view = yt.views
-        rating = yt.rating
-        age_restricted = yt.age_restricted
+        # youtube = YTvideos(title=title,description=desc,thumbnail_url=thumbnail_url, slug = slugify(title))
         res = render(request,'youtube.html',{"title":title,"thumbnail_url":thumbnail_url,"video_url":video_url})
         return res
     else:
