@@ -1,0 +1,2 @@
+{% load i18n %}
+{% blocktrans %}Dr. Strange does not like Your unverified primary e-mail address.{% endblocktrans %}

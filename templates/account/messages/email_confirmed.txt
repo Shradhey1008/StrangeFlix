@@ -1,0 +1,4 @@
+{% load i18n %}
+{% blocktrans %} Voila! You have confirmed {{email}}.
+Dr. Strange is at your service now! 
+{% endblocktrans %}
