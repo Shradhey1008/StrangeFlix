@@ -24,8 +24,8 @@
 {% block content %}
 <section id="top">
     <div class="container-fluid">
-        <div class="row" style="background-color:#FF6347;">
-            <div class="col-sm-12 mt-2" style="font-family:'Comic Sans MS'; font-size: 55px;">
+        <div class="row c" style="background-color:#03aa94;">
+            <div class="col-sm-12 mt-2" style="font-family:'Montserrat'; color: aliceblue; font-size: 35px;">
                 <center><b>Welcome to YouTube video downloader</b></center>
             </div>
         </div>
@@ -42,27 +42,29 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6" style="font-family:'Montserrat'; color: rgb(174, 174, 175); font-size: 15px;" >
                 <ul>
                     <li>Step 1 : Copy the video URL in the text box</li>
                     <li>Step 2 : Click on the Search button</li>
-                    <li>Step 3 : Choose the available formate and resolution</li>
+                    <li>Step 3 : Choose the available format and resolution</li>
                     <li>Step 4 : Click on Download button</li>
                 </ul>
             </div>
             <div class="col-sm-1">
 
             </div>
-            <div class="col-sm-3" id="myDiv">
+            <div class="col-sm-3" id="myDiv" style="font-family:'Montserrat'; color:aliceblue; font-size: 15px;">
                 <div aria-live="polite" aria-atomic="true">
                     <div class="toast">
                         <div class="toast-header">
                             <strong class="mr-auto">Notifications</strong>
-                            <small>1 seconds ago</small>
-                            <button id="hide" type="button" class="ml-2 mb-1 close" data-dismiss="toast"
+                            <button id="hide" type="button" style="color:aliceblue;" class="ml-2 mb-1 close" data-dismiss="toast"
                                 aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
+                            <br>
+                            <small>1 seconds ago</small>
+                            
                         </div>
                         <div class="toast-body">
                             <br>
@@ -71,16 +73,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3" id="myDiv2">
+            <div class="col-sm-3" id="myDiv2" style="font-family:'Montserrat'; color: aliceblue; font-size: 15px;">
                 <div aria-live="polite" aria-atomic="true">
                     <div class="toast">
                         <div class="toast-header">
                             <strong class="mr-auto">Notifications</strong>
-                            <small>1 seconds ago</small>
-                            <button id="hide2" type="button" class="ml-2 mb-1 close" data-dismiss="toast"
+                            <button id="hide" type="button" style="color:aliceblue;" class="ml-2 mb-1 close" data-dismiss="toast"
                                 aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
+                            <br>
+                            <small>1 seconds ago</small>
+                            
                         </div>
                         <div class="toast-body">
                             <br>
@@ -98,23 +102,24 @@
             </div>
         </div>
         <form class="" action="{% url 'videoplayer:Utube_search' %}" method="POST">
-            <div class="row" style="margin-top:20px;">
+            <div class="row" >
 
                 {% csrf_token %}
-                <div class="col-sm-6">
+                <div class="col-sm-6" style="margin-top:20px;">
                     {% if video_url %}
-                    <input class="form-control" type="search" name="video_url" placeholder="Search" aria-label="Search"
+                    <input class="form-control" type="search" name="video_url" placeholder="Enter url" aria-label="Search"
                         value={{video_url}}>
                     {% else %}
-                    <input class="form-control" type="search" name="video_url" placeholder="Search" aria-label="Search">
+                    <input class="form-control" type="search" name="video_url" placeholder="Enter url" aria-label="Search">
                     {% endif %}
                 </div>
-                <div class="col-sm-2">
-                    <button class="btn btn-outline-success" type="submit" style="margin-left:-20px;">Search</button>
+                <div class="col-sm-2" style="margin-top:20px;">
+                    <button class="btn btn-outline-success"  type="submit" >Search</button>
                 </div>
 
             </div>
         </form>
+        <br>
         <form class="" action="{% url 'videoplayer:Utube_down' %}" method="POST">
             {% csrf_token %}
             <div class="row mt-3 section">
@@ -174,6 +179,8 @@
         </form>
     </div>
 </section>
+<br><br>
+
 {% endblock %}
 
 {% block extra_body %}

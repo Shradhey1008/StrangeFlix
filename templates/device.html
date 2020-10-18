@@ -12,11 +12,11 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label>Title</label>
-                    <input type="text" class="form-control" name="title" placeholder="Add title">
+                    <input type="text" class="form-control" id="myBtn" name="title" placeholder="Add title">
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <textarea type="text" class="form-control" name="description" placeholder="Add description"></textarea>
+                    <textarea type="text" class="form-control" id="myBtn" name="description" placeholder="Add description"></textarea>
                 </div>
                 <div class="form-group">
                     <label>Tags</label>
@@ -31,8 +31,9 @@
                     <input type="file" id="img" name="thumbnail" accept="image/*">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id="myBtn">Submit</button>
             </form>
+            <br>
             <p>Common Tags: 
             {% for mt in common_tags %}
                 <a href="#" class="badge badge-success">{{mt}}</a>
@@ -77,6 +78,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/static/js/tagsinput.js"></script>
     <script>
+        var input = document.getElementById("myInput");
+        input.addEventListener("keyup", function(event) {
+          if (event.keyCode === 13) {
+           event.preventDefault();
+           document.getElementById("myBtn").click();
+          }
+        });
+    </script>
+
+
+    <script>  
     $("#post-form").submit(function(e){
         e.preventDefault();
         });</script>

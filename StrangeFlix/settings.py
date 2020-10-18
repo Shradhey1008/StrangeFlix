@@ -104,8 +104,8 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'test',
     'USER': 'postgres',
-    'PASSWORD': 'anurag',
-    # 'PASSWORD': 'pasword',
+    # 'PASSWORD': 'anurag',
+    'PASSWORD': 'pasword',
     'HOST':'localhost',
     # 'PASSWORD': 'Smtwtfss1@',
 }
@@ -212,3 +212,4 @@ RAZORPAY_SECRET_KEY = 'ButjOYGqTSw5uZV00OqYKwe2'
 RAZORPAY_KEY_ID = 'rzp_test_Hb9AUuiZMioY63'
 RAZORPAY_SECRET_KEY = 'v7njOzKIrb6apb5Dx9zexCuv'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

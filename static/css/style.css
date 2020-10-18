@@ -20,7 +20,10 @@ body {
   color: #b6b5b5;
   background-color: #010e28 !important;
 }
-
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; 
+}
 h1,
 h2,
 h3,
@@ -99,8 +102,11 @@ img {
 .ml-30 {
   margin-left: 30px !important; }
 
+.ml-500 {
+  margin-left: 500px !important; }
+
 .ml-50 {
-  margin-left: 50px !important; }
+    margin-left: 50px !important; }
 
 .mr-15 {
   margin-right: 15px !important; }
@@ -406,6 +412,7 @@ input:focus {
               color: #680109; } }
     .header-area .videomag-main-menu .top-search-area {
       position: relative;
+      
       z-index: 1; }
       .header-area .videomag-main-menu .top-search-area form {
         position: relative;
