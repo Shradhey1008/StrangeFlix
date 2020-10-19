@@ -212,5 +212,8 @@ RAZORPAY_SECRET_KEY = 'ButjOYGqTSw5uZV00OqYKwe2'
 RAZORPAY_KEY_ID = 'rzp_test_Hb9AUuiZMioY63'
 RAZORPAY_SECRET_KEY = 'v7njOzKIrb6apb5Dx9zexCuv'
 
+#  shradhey razorpay
+RAZORPAY_KEY_ID = 'rzp_test_OlcDAaBNQi27Mr'
+RAZORPAY_SECRET_KEY = 'RoteTtFaPrsLCE9eodgIXkG1'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
