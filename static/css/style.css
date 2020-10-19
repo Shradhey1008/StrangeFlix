@@ -948,7 +948,7 @@ input:focus {
         font-size: 14px;
         color: #6a6a6a; }
         .footer-area .footer-nav ul li a:hover, .footer-area .footer-nav ul li a:focus {
-          color:  #010e28; }
+          color: red; }
   .footer-area .video-catagory {
     position: relative;
     z-index: 1;
@@ -1086,7 +1086,7 @@ input:focus {
       .comment_area .comment-content .comment-meta .post-author:hover,
       .comment_area .comment-content .comment-meta .post-date:hover,
       .comment_area .comment-content .comment-meta .reply:hover {
-        color:  #010e28; }
+        color:  red; }
     .comment_area .comment-content .comment-meta .reply {
       margin-right: 0; }
       .comment_area .comment-content .comment-meta .reply::after {

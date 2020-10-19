@@ -54,7 +54,7 @@
           <div class="col-12 col-sm-4">
             <!-- Logo Area -->
             <div class="logo-area">
-              <a href="../">
+              <a href="/index/">
                 <h2 style="color:aliceblue;">StrangeFlix</h2>
               </a>
               <a href=""></a>
@@ -63,7 +63,7 @@
           <div class="col-12 col-sm-8">
             <!-- Top Add Area -->
             <div class="top-add-area text-right">
-              <a href="#"><img src="img/bg-img/add.png" alt=""></a>
+              <a href="#"><img src="{% static 'img/bg-img/add.png' %}" alt=""></a>
             </div>
           </div>
         </div>
@@ -184,21 +184,7 @@
       </div>
     </div>
   </header>
-  <!-- ##### Header Area End ##### -->
-
-
-  <!-- <div>
-      <strong>Menu:</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
-    </div> -->
+  
   {% block content %}
   {% endblock %}
   {% endblock %}
@@ -213,8 +199,8 @@
         <div class="col-12 col-lg-4">
           <div class="footer-content">
             <!-- Logo -->
-            <a href="index.html" class="foo-logo"><img src="img/core-img/logo.png" alt=""></a>
-            <p>This is our footer area</p>
+            <a href="/index/" class="foo-logo"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+            <p>Follow StrangeFlix</p>
             <div class="footer-social-info d-flex">
               <a href="#"><i class="fa fa-pinterest"></i></a>
               <a href="#"><i class="fa fa-facebook"></i></a>
@@ -227,7 +213,7 @@
         <div class="col-12 col-lg-7 col-xl-6">
           <div class="footer-content d-flex flex-wrap">
             <!-- Footer Nav -->
-            <div class="footer-nav">
+            <!-- <div class="footer-nav">
               <h5 class="widget-title">Usefull Links</h5>
               <nav>
                 <ul>
@@ -238,25 +224,45 @@
                   <li><a href="#">Testimonials</a></li>
                 </ul>
               </nav>
-            </div>
+            </div> -->
 
             <!-- Footer Nav -->
             <div class="footer-nav">
-              <h5 class="widget-title">About Us</h5>
+              <h5 class="widget-title">Sort by Language</h5>
               <nav>
                 <ul>
+                  <li><a href="#"><span>Hindi</span> </a></li>
+                  <li><a href="#"><span>English</span></a></li>
+                  <li><a href="#"><span>Punjabi</span> </a></li>
+                  <li><a href="#"><span>Telugu</span> </a></li>
+                  <li><a href="#"><span>Tamil</span></a></li>
+                </ul>
+                <!-- <ul>
                   <li><a href="#">Contact Us</a></li>
                   <li><a href="#">Jobs</a></li>
                   <li><a href="#">Terms</a></li>
                   <li><a href="#">Conditions</a></li>
                   <li><a href="#">About</a></li>
-                </ul>
+                </ul> -->
               </nav>
             </div>
 
+
+
+            <!-- <div class="video-catagory">
+              <h5 class="widget-title"></h5>
+              <ul>
+                <li><a href="#"><span>Hindi</span> <span>20</span></a></li>
+                <li><a href="#"><span>English</span> <span>10</span></a></li>
+                <li><a href="#"><span>Punjabi</span> <span>71</span></a></li>
+                <li><a href="#"><span>Telugu</span> <span>15</span></a></li>
+                <li><a href="#"><span>Tamil</span> <span>15</span></a></li>
+              </ul>
+            </div>
+            <hr><br> -->
             <!-- Video Catagory -->
             <div class="video-catagory">
-              <h5 class="widget-title">Video Categories</h5>
+              <h5 class="widget-title">Sort by Genre</h5>
               <ul>
                 <li><a href="#"><span>Action</span> <span>20</span></a></li>
                 <li><a href="#"><span>Drama</span> <span>10</span></a></li>
