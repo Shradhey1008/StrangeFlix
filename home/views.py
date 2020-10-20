@@ -14,3 +14,6 @@ def profile(request):
 
 def pay(request):
     return render(request,'pay.html')
+
+def success(request):
+    return render(success,'success.html')
