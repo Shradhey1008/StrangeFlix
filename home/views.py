@@ -12,8 +12,11 @@ def strange(request):
 def profile(request):
     return render(request, 'profile.html')
 
-def pay(request):
-    return render(request,'pay.html')
+def pricing(request):
+    return render(request,'pricing.html')
 
 def success(request):
-    return render(success,'success.html')
+    return render(request,'success.html')
+
+def pay(request):
+    return render(request,'pay.html')
