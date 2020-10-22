@@ -45,7 +45,7 @@
                         <div class="cards">
                             <div class="row no-gutters border rounded  flex-md-row mb-4 shadow-sm h-md-250">
                                 <div class="col p-4 d-flex flex-column position-static">
-                                    <video width='400' poster="'{{ MEDIA_URL }}{{ video.thumbnail }}'" controls>
+                                    <video width='400' poster="{{ MEDIA_URL }}{{ video.thumbnail }}" controls>
                                         <source src='{{ MEDIA_URL }}{{ video.videofile }}' type='video/mp4'>
                                     </video>
                                     <h3 class="my-1"><a href="{% url 'videoplayer:detail' video.slug %}">{{video.title}}</a></h3>

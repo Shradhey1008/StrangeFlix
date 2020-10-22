@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-<video width='400' controls>
+<video width='400' controls poster="{{ MEDIA_URL }}{{ video.thumbnail }}">
     <source src='{{ MEDIA_URL }}{{ video.videofile }}' type='video/mp4'>
 </video>
 <h2>{{video.title}}</h2>
