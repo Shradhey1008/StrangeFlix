@@ -9,6 +9,7 @@
 @import url('magnific-popup.css');
 @import url('font-awesome.min.css');
 @import url('nice-select.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 /* :: 3.0 Base CSS */
 * {
   margin: 0;
@@ -20,6 +21,8 @@ body {
   color: #b6b5b5;
   background-color: #010e28 !important;
 }
+
+
 .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0; 

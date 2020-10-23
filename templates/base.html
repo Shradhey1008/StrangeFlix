@@ -23,7 +23,113 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> {% endcomment %}
   
+  <style>
 
+    @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+    #container {
+      color:rgb(194, 194, 194);
+      text-transform: uppercase;
+      margin:0px;
+      font-family:'Roboto';
+      text-align:center;
+      font-size:18px;
+      font-weight:bold; 
+      position: relative;
+      width:100%;
+      bottom:45%;
+      display:block;
+    }
+
+    #flip {
+      height:50px;
+      overflow:hidden;
+    }
+
+    #flip > div > div {
+      color:#fff;
+      padding:4px 12px;
+      height:40px;
+      margin-bottom:60px;
+      display:inline-block;
+    }
+
+    #flip div:first-child {
+      animation: show 5s linear infinite;
+    }
+
+    #flip div div {
+      background:#42c58a;
+    }
+    #flip div:first-child div {
+      background:#4ec7f3;
+    }
+    #flip div:last-child div {
+      background:#DC143C;
+    }
+
+    @keyframes show {
+      0% {margin-top:-270px;}
+      5% {margin-top:-180px;}
+      33% {margin-top:-180px;}
+      38% {margin-top:-90px;}
+      66% {margin-top:-90px;}
+      71% {margin-top:0px;}
+      99.99% {margin-top:0px;}
+      100% {margin-top:-270px;}
+    }
+
+
+    .txt {
+        color: #ffffff;
+        background:#000000;
+        font-size:35px;
+        line-height: normal;
+        font-family: Arial;
+        border: 5px solid black;
+        text-transform: uppercase;
+    }
+    .txt::before {
+        content: 'strangeflix';
+        position: absolute;
+        mix-blend-mode: difference;
+        filter: blur(0.5px);
+    }
+    .neon-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        display:inline-flex;
+        filter: brightness(300%);
+        overflow: hidden;
+    }
+    .gradient{
+        background: linear-gradient(114.5793141156962deg, rgba(6, 227, 250,1) 4.927083333333334%,rgba(229, 151, 64,1) 97.84374999999999%);
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height:100%;
+        mix-blend-mode: multiply;
+    }
+    .dodge {
+        background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+        position: absolute;
+        top:-100%;
+        left:-100%;
+        right:0;
+        bottom:0;
+        mix-blend-mode: color-dodge;
+        animation: dodge-area 3s linear infinite;
+    }
+    @keyframes dodge-area {
+        to {
+            transform: translate(50%,50%);
+        }
+    }
+
+  </style>
   {% block head %}
   {% endblock %}
 </head>
@@ -55,25 +161,36 @@
 
     <!-- Top Header Area -->
     <div class="top-header-area">
-      <div class="container-fluid h-100">
-        <div class="row h-100 align-items-center">
-          <div class="col-12 col-sm-4">
+      
+        <div class="flex-row d-flex justify-content-between align-items-center">
+          <div class="p-2">
             <!-- Logo Area -->
-            <div class="logo-area">
-              <a href="/">
-                <h2 style="color:aliceblue;">StrangeFlix</h2>
+            
+              <a href="../">
+                <div class="neon-wrapper">
+                  <span class="txt" >StrangeFlix</span>
+                  <span class="gradient"></span>
+                  <span class="dodge"></span>
+             </div>
+
               </a>
-              <a href=""></a>
-            </div>
+              
+            
           </div>
-          <div class="col-12 col-sm-8">
+          <div class="p-2">
             <!-- Top Add Area -->
-            <div class="top-add-area text-right">
-              <a href="#"><img src="img/bg-img/add.png" alt=""></a>
-            </div>
+              <div id=container>
+                Watch 
+                <div id=flip>
+                  <div><div>Action</div></div>
+                  <div><div>Thriller</div></div>
+                  <div><div>Everything</div></div>
+                </div>
+                Right here!
+              </div>
           </div>
         </div>
-      </div>
+      
     </div>
 
     <!-- Navbar Area -->
@@ -101,8 +218,6 @@
                 <ul>
                   
                   <li><a href="#">Videos</a></li>
-                  <!-- <li><a href="catagory.html">Movies</a></li> -->
-                  <!-- <li><a href="contact.html"></a></li> -->
                   
                   <li><a href="#">Explore</a>
                     <div class="megamenu">
@@ -116,7 +231,6 @@
                       </ul>
                       <ul class="single-mega cn-col-3">
                         <h5>Hollywood</h5>
-                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="catagory.html">Catagory</a></li>
                         <li><a href="video-post.html">Video Post</a></li>
                         <li><a href="single-post.html">Single Post</a></li>
@@ -137,13 +251,11 @@
                   
                   {%if user.is_staff%}
                   <li><a href="#">Upload Videos</a>
-                    <!-- Anurag this content has to be dynamic for what were the latest things seen by the user -->
+                    <!-- Admin options for video upload -->
                     <ul class="dropdown">
                       <li><a href="/uploads/youtube/">YouTube Upload</a></li>
                       <li><a href="/uploads/device">Device Upload</a></li>
                       <li><a href="">Amazon S3</a></li>
-                      <!-- <li><a href="single-post.html">Fourth Last</a></li>
-                                              <li><a href="contact.html">Fifth Last</a></li> -->
                     </ul>
                   </li>
                   {% endif %}
@@ -159,9 +271,8 @@
                   </li>
 
 
-                  <!-- Anurag, this has to be dynamic based on session of the user -->
+                  <!-- This is dynamic based on session of the user -->
                   {% if user.is_authenticated %}
-                  <!-- <li class="active"><a href="{% url 'account_logout' %}">Log Out</a></li> -->
                   {% else %}
                   <li><a href="{% url 'account_login' %}">Log In</a></li>
                   <li class="active"><a href="{% url 'account_signup' %}">Sign Up</a></li>
@@ -173,14 +284,6 @@
 
               <!-- Nav End -->
             </div>
-
-            <!-- Top Search Area -->
-            <!-- <div class="top-search-area">
-              <form action="#" method="post">
-                <input type="search" name="top-search" id="topSearch" placeholder="Search">
-                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-              </form>
-            </div> -->
 
             <!-- Top Profile Area -->
             {% if user.is_authenticated %}
@@ -209,19 +312,6 @@
   </header>
   <!-- ##### Header Area End ##### -->
 
-
-  <!-- <div>
-      <strong>Menu:</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
-    </div> -->
   {% block content %}
   {% endblock %}
   {% endblock %}
