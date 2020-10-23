@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'videoplayer',
     'subscriptions',
     'taggit',
+    'category',
 ]
 
 MIDDLEWARE = [
@@ -102,10 +103,10 @@ WSGI_APPLICATION = 'StrangeFlix.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'test',
+    'NAME': 'test2',
     'USER': 'postgres',
-    # 'PASSWORD': 'anurag',
-    'PASSWORD': 'pasword',
+    'PASSWORD': 'anurag',
+    # 'PASSWORD': 'pasword',
     'HOST':'localhost',
     # 'PASSWORD': 'Smtwtfss1@',
 }
@@ -205,11 +206,8 @@ AUTHENTICATION_BACKENDS = (
  'allauth.account.auth_backends.AuthenticationBackend',
  )
 #  anurag razorpay
-RAZORPAY_KEY_ID = 'rzp_test_0ddtQBOPR1H6DW'
-RAZORPAY_SECRET_KEY = 'ButjOYGqTSw5uZV00OqYKwe2'
+STRIPE_KEY_ID = 'pk_test_51Hf1SnHWTOg4MeEretLMghbWsSCbyocGNBQiPNIJ2AxMtuHNQD6dxl2yGdrX14NMiBWaXgpGvWU4skpbSZOPRHZ400gb3M1O9C'
+STRIPE_SECRET_KEY = 'sk_test_51Hf1SnHWTOg4MeErO7KoHVEbmFtgrG4FivLi8w1H1elyBOlToMjo9yB0YTlN2JwiLrJDRIFzOFEodfdNcCKkhpbs00SvmUrxlO'
 
-#  aparna razorpay
-RAZORPAY_KEY_ID = 'rzp_test_Hb9AUuiZMioY63'
-RAZORPAY_SECRET_KEY = 'v7njOzKIrb6apb5Dx9zexCuv'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

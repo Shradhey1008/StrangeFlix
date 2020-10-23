@@ -27,6 +27,8 @@ urlpatterns = [
     path('signup/',include('signup.urls'), name = 'signup'),
     path('accounts/', include('allauth.urls')),
     path('uploads/',include('videoplayer.urls'),name='videoplayer'),
+    path('category/',include('category.urls'),name='videocats'),
+    path('subscriptions/',include('subscriptions.urls'),name='plans'),
 ]
 
 if settings.DEBUG:
