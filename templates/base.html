@@ -100,11 +100,11 @@
               <div class="classynav mt-2">
                 <ul>
                   
-                  <li><a href="#">Videos</a></li>
+                  <li><a href="/category/">Videos</a></li>
                   <!-- <li><a href="catagory.html">Movies</a></li> -->
                   <!-- <li><a href="contact.html"></a></li> -->
                   
-                  <li><a href="#">Explore</a>
+                  <li><a href="/videos/">Explore</a>
                     <div class="megamenu">
                       <ul class="single-mega cn-col-3">
                         <h5>Bollywood</h5>
@@ -188,12 +188,12 @@
                 
               <a href="#" style="color: white;">
                  Hello {{name}}   <!-- this has to be dynamic username -->
-                <i class="glyphicon glyphicon-user w3-large" data-toggle="dropdown"></i>
+                <i class="fa fa-address-book" data-toggle="dropdown"></i>
                 <span class="caret"></span>
               </a>
                   <!-- Anurag this content has to be dynamic for what were the latest things seen by the user -->
                   <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="">Account</a></li>
+                    <li><a href="/profile">Account</a></li>
                     <li><a href="">My favourite</a></li>
                     <li><a href="{% url 'account_change_password' %}">Change password</a></li>
                     <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
