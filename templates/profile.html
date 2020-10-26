@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html>
-
-<head>
-   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-   <title>About me</title>
+{% block title %}
+   About me
+   {% endblock %}
+   {% block head %}
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <link rel="stylesheet" href="{% static 'css/profile.css' %">
@@ -257,21 +256,12 @@
       }
    </style>
 
-</head>
+{% endblock %}
 
-<body>
-
-   <header>
-
-      <div class="name ">
-         Shradhey Pathak
-      </div>
-
-      <div class="ava">
-         <img src="{% static 'image/shradhey.png' %}" alt="avatar" />
-      </div>
-
-   </header>
+{% block content %}
+   <div class="name ">
+      {{user.username}}
+   </div>
    <div class="content">
       <aside class="info ">
          <div class="box">
@@ -302,21 +292,38 @@
                 </p>                 -->
 
          </div>
-
+         {% if user_subscription != None %}
          <div class="box">
 
             <p class="title">
                <i class="fa fa-asterisk"></i>
-               Buy Silver Offer
+               Current Membership:
+            </p>
+            <p class="padd-top"><strong>
+                  {{user_membership.membership.membership_type}}
+               </strong>
             </p>
 
-            <p class="padd-top">499 per year</p>
-            <!-- <div class="skill"> -->
+            {% if user_subscription.active != False %}
+            <p class="padd-top">
+               <strong>Since:</strong>
+            <h6>{{user_subscription.get_created_date}}</h6>
+            </p>
+            <p class="padd-top">
+               <strong>Next Billing Date:</strong>
+            <h6>{{user_subscription.get_next_billing_date}}</h6>
+            </p>
+            <a href="cancel/">Cancel Subscription</a>
+            {% else %}
+            <p class="padd-top">
+               You dont have an active membership plan.Check them out here!!
+               <a href="{% url 'subscriptions:select' %}"> <button class="btn btn-warning"> Membership Plans</button></a>
+            </p>
+            {% endif %}
 
             <!-- <div class="skill-right r1"></div> -->
             <!-- </div> -->
             <br>
-            <a href="/profile/pay/">Buy Now</a>
 
             <!-- <p>JavaScript/jQuery</p>
                 <div class="skill">
@@ -330,7 +337,7 @@
                     <div class="skill-right r3"></div>
                 </div> -->
          </div>
-
+         {%endif%}
       </aside>
 
 
@@ -379,7 +386,4 @@
       </section>
 
    </div>
-   <footer> </footer>
-</body>
-
-</html>
+ {% endblock %}

@@ -8,5 +8,4 @@ urlpatterns = [
     path('plan/',views.selected_plan,name = 'plan'),
     path('plan/payment/',views.PaymentView,name = 'payment'),
     path('plan/payment/update/<Subscription_id>/',views.updateTransactions,name = 'update'),
-
 ]

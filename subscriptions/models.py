@@ -3,6 +3,7 @@ from django.db import models
 from django.conf import settings
 from django.db.models.signals import post_save
 import stripe
+from datetime import datetime
 
 
 Membership_Choices = (
@@ -54,3 +55,13 @@ class Subscription(models.Model):
 
     def __str__(self):
         return self.user_membership.user.username
+
+    @property
+    def get_created_date(self):
+        subscription = stripe.Subscription.retrieve(self.stripe_subscription_id)
+        return datetime.fromtimestamp(subscription.created)
+    
+    def get_next_billing_date(self):
+        subscription = stripe.Subscription.retrieve(self.stripe_subscription_id)
+        return datetime.fromtimestamp(subscription.current_period_end)
+        

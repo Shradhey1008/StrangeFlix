@@ -2,6 +2,8 @@ from django.db import models
 from subscriptions.models import Membership
 from videoplayer.models import DeviceVideo, YtVideo
 from django.urls import reverse
+from django.utils import timezone
+from django.contrib.auth.models import User
 # Create your models here.
 
 class Category(models.Model):
@@ -34,3 +36,17 @@ class Video(models.Model):
 
     def get_absolute_url(self):
         return reverse("category:video-detail", kwargs={"category_slug": self.vid_category.slug,"categoryvideo_slug":self.slug})
+
+    @property
+    def number_of_comments(self):
+        return Comment.objects.filter(post=self).count()
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Video,on_delete=models.CASCADE,related_name='comments')
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    content = models.TextField()
+    date_posted = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return str(self.user) + ', ' + self.post.slug[:40]

@@ -10,7 +10,7 @@ from json import dumps
 # Create your views here.
 
 def membership(request):
-    plans = Membership.objects.all()
+    plans = Membership.objects.all().order_by('price')
     current_membership = get_user_membership(request)
 
     context = {'objects': plans, 'current_membership': str(
@@ -97,6 +97,29 @@ def updateTransactions(request, Subscription_id):
 
     messages.info(request, "Successfully created membership")
     return redirect('/category')
+
+
+def cancelSubscription(request):
+    user_sub = get_user_subscription(request)
+
+    if user_sub.active == False:
+        messages.info(request,"You dont have an active Membership")
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+    sub = stripe.Subscription.retrieve(user_sub.stripe_subscription_id)
+    sub.delete()
+
+    user_sub.user_membership.membership.membership_type = None 
+    user_sub.active = False
+    user_sub.save()
+
+    free_membership = Membership.objects.filter(membership_type='Basic').first()
+    user_membership = get_user_membership(request)
+    user_membership.membership = free_membership
+    user_membership.save()
+
+    messages.info(request, "Successfully cancelled membership.")
+    return redirect('/profile')
 
 
 def get_user_membership(request):

@@ -1,35 +1,189 @@
-{% load embed_video_tags %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<!-- Favicon -->
+<link rel="icon" href="img/core-img/favicon.ico">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <div class="container" method='POST' action='{% url "video" %}'>
-      <form method='POST' action='{% url "video" %}'>
-        {% csrf_token %}
-        <input name='link' id="link" placeholder='Link' type='url' required>
-        <!-- <input type="file" name="document"> -->
-        <button class="btn btn-success" type="submit">Submit</button>
-      </form>
+<!-- Stylesheet -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block content %}
+{% if objects is not None %}
+<section class="post-news-area">
+  <!-- Video Content -->
+  <div class="video-content-area mb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="single-blog-post style2">
+            <div class="blog-thumb mb-30">
+              <!-- <img src="{% static 'img/bg-img/42.jpg'%}" alt=""> -->
+              <p class='text-white'>  </p>
+              <video width='1000' height="500" controls>
+                <source src='{{ MEDIA_URL }}{{ objects.yt_video.ytubevideo }}' type='video/mp4'>
+              </video>
+              <!-- Play Button -->
+              <!-- <a href="#" class="video-play-btn"><i class="fa fa-play"></i></a> -->
+            </div>
+            <div class="blog-content d-flex justify-content-between align-items-end flex-wrap">
+              <div class="post--meta- mb-70">
+                <a href="#" class="post-tag">Featured</a>
+                <h4 class="text-white">{{ objects.yt_video.title }}</h4>
+                <div class="post-meta">
+                  <a href="#"><img src="img/core-img/author2.png" alt=""> By James Smith</a>
+                  <a href="#"><img src="img/core-img/calendar2.png" alt=""> July 23, 2018</a>
+                  <a href="#"><img src="img/core-img/chat2.png" alt=""> 5</a>
+                  <a href="#"><img src="img/core-img/like2.png" alt=""> 12k</a>
+                </div>
+              </div>
+              <!-- Like Dislike Share -->
+              <div class="like-dislike-share mb-70">
+                <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-ban" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Likes 112</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     
-    {% for i in obj %}
-    {% video i.video 'small' %}
-    {% endfor %}
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
-</html>
+    <div class="container">
+      <class class="row">
+        <!-- Post Details Content Area -->
+        <div class="col-12 col-lg-8">
+          <div class="post-details-content mb-100">
+            <div class="single-blog-post style2 mb-50">
+              <div class="blog-content text-white">
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sapien nunc, aliquam et sollicitudin
+                  a,
+                  mollis sit amet odio. Cras in varius libero, ac molestie enim. Aenean semper leo et tellus luctus,
+                  ultricies condimentum odio placerat. Sed ultrices in orci eget tristique. Nullam ullamcorper justo sit
+                  amet lectus volutpat finibus. Ut luctus risus vel quam malesuada dapibus non eu libero. Phasellus et
+                  purus vel purus malesuada eleifullamcorper end.</p>
+                  <p>Aliquam et semper neque. Donec vitae ultrices justo. Curabitur a semper leo, quis maximus tellus.
+                    Fusce
+                    euismod nisi eu sapien dignissim pulvinar. Suspendisse sagittis, nibh ac auctor facilisis, tellus mi
+                    ultrices velit, vehicula feugiat eros felis et magna. Etiam eu nibh ac ligula feugiat scelerisque at
+                    ut
+                    nisi. Cras id posuere nisi.</p> -->
+                    <p>{{ objects.yt_video.description }}</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Comment Area Start -->
+            <div class="comment_area clearfix mb-100">
+              <h3 class="mb-50">Comments</h3>
+              
+              <ol>
+                <!-- Single Comment Area -->
+                <li class="single_comment_area">
+                  <!-- Comment Content -->
+                  <div class="comment-content d-flex">
+                    <!-- Comment Meta -->
+                    <div class="comment-meta text-white">
+                      <div class="d-flex">
+                        <a href="#" class="post-author text-white">Jane Smith</a>
+                        <a href="#" class="post-date text-white">July 11, 2018</a>
+                        <!-- <a href="#" class="reply text-white">Reply</a> -->
+                      </div>
+                      <p>Consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tinci dunt
+                        mi.
+                        Nullam vel orci dui. Su spendisse sit amet laoreet neque. Fusce sagittis sus cipit sem a
+                        consequat.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <!-- <ol class="children">
+                    <li class="single_comment_area">
+                      <div class="comment-content d-flex">
+                        <div class="comment-meta">
+                          <div class="d-flex">
+                            <a href="#" class="post-author text-white">Christian Williams</a>
+                            <a href="#" class="post-date text-white">April 15, 2018</a>
+                            <a href="#" class="reply text-white">Reply</a>
+                          </div>
+                          <p>Consectetur adipiscing elit. Praesent vel tortor facilisis, Nullam vel orci dui. Su spendisse
+                            sit amet laoreet neque.</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                  </li> -->
+                  
+                  <!-- Single Comment Area -->
+                  {% if comments %}
+                  {% for comment in comments %}
+                  <li class="single_comment_area">
+                    <!-- Comment Content -->
+                    <div class="comment-content d-flex">
+                      <!-- Comment Meta -->
+                      <div class="comment-meta">
+                        <div class="d-flex">
+                          <a href="#" class="post-author text-white">{{ comment.user.username }}</a>
+                          <a href="#" class="post-date text-white">{{ comment.date_posted }}</a>
+                          <!-- <a href="#" class="reply text-white">Reply</a> -->
+                        </div>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat
+                          nulla placerat, tincidunt mi. Nullam vel orci dui. Su spendisse sit amet laoreet neque. Fusce
+                          sagittis suscipit.</p> -->
+                          <p>{{ comment.content|safe }}</p>
+                        </div>
+                      </div>
+                    </li>
+                    {% endfor %}
+                  </ol>
+                </div>
+                {% else %}
+                <strong class="text-secondary">No comments yet...</strong>
+                {% endif %}
+                
+                <div class="post-a-comment-area mb-100 clearfix">
+                  <h3 class="mb-50">Leave a comment</h3>
+                  
+                  <!-- Reply Form -->
+                  <div class="contact-form-area">
+                    <form action="{% url 'category:video-comment' %}" method="POST">
+                      {% csrf_token %}
+                      <div class="row">
+                        <!-- <div class="col-12 col-lg-6">
+                          <input type="text" class="form-control" id="name" placeholder="Your Name*" required>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                          <input type="email" class="form-control" id="email" placeholder="Your Email*" required>
+                        </div> -->
+                        <div class="col-12">
+                          <textarea name="content" class="form-control" id="message" cols="50" rows="10" placeholder="Message*"
+                          required></textarea>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn videomag-btn mt-30" type="submit">Submit Comment</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </class>
+            {% else %}
+            <div class="alert alert-danger" role="alert">
+              Cannot Watch this Video! Upgrade Membership
+            </div>
+            {% endif %}
+            
+            
+            
+            
+            
+          </div>
+        </div>
+      </section>
+      
+      {% endblock %}
+      {% block extra_body %}
+      {% endblock %}
