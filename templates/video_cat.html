@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+{% comment %} {% for object in objects %} {% endcomment %}
+{% if objects is not None %}
+<p class='text-white'> {{ objects.yt_video.title }} </p>
+<video width='400' controls >
+    <source src='{{ MEDIA_URL }}{{ objects.yt_video.ytubevideo }}' type='video/mp4'>
+</video>
+{% else %}
+<div class="alert alert-danger" role="alert">
+  Cannot Watch this Video! Upgrade Membership
+</div>
+{% endif %}
+{% comment %} {% endfor %} {% endcomment %}
+</div>
+{% endblock content %}

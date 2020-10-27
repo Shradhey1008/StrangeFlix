@@ -1,0 +1,383 @@
+{% load static %}
+{% load account %}
+{% user_display user as name %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %} " type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> {% endcomment %}
+  <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- jQuery library -->
+  {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> {% endcomment %}
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> {% endcomment %}
+  
+  <style>
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+    #container {
+      color:rgb(194, 194, 194);
+      text-transform: uppercase;
+      margin:0px;
+      font-family:'Roboto';
+      text-align:center;
+      font-size:18px;
+      font-weight:bold; 
+      position: relative;
+      width:100%;
+      bottom:45%;
+      display:block;
+    }
+
+    #flip {
+      height:50px;
+      overflow:hidden;
+    }
+
+    #flip > div > div {
+      color:#fff;
+      padding:4px 12px;
+      height:40px;
+      margin-bottom:60px;
+      display:inline-block;
+    }
+
+    #flip div:first-child {
+      animation: show 5s linear infinite;
+    }
+
+    #flip div div {
+      background:#42c58a;
+    }
+    #flip div:first-child div {
+      background:#4ec7f3;
+    }
+    #flip div:last-child div {
+      background:#DC143C;
+    }
+
+    @keyframes show {
+      0% {margin-top:-270px;}
+      5% {margin-top:-180px;}
+      33% {margin-top:-180px;}
+      38% {margin-top:-90px;}
+      66% {margin-top:-90px;}
+      71% {margin-top:0px;}
+      99.99% {margin-top:0px;}
+      100% {margin-top:-270px;}
+    }
+
+
+    .txt {
+        color: #ffffff;
+        background:#000000;
+        font-size:35px;
+        line-height: normal;
+        font-family: Arial;
+        border: 5px solid black;
+        text-transform: uppercase;
+    }
+    .txt::before {
+        content: 'strangeflix';
+        position: absolute;
+        mix-blend-mode: difference;
+        filter: blur(0.5px);
+    }
+    .neon-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        display:inline-flex;
+        filter: brightness(300%);
+        overflow: hidden;
+    }
+    .gradient{
+        background: linear-gradient(114.5793141156962deg, rgba(6, 227, 250,1) 4.927083333333334%,rgba(229, 151, 64,1) 97.84374999999999%);
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height:100%;
+        mix-blend-mode: multiply;
+    }
+    .dodge {
+        background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+        position: absolute;
+        top:-100%;
+        left:-100%;
+        right:0;
+        bottom:0;
+        mix-blend-mode: color-dodge;
+        animation: dodge-area 3s linear infinite;
+    }
+    @keyframes dodge-area {
+        to {
+            transform: translate(50%,50%);
+        }
+    }
+
+  </style>
+  {% block head %}
+  {% endblock %}
+</head>
+
+<body>
+  {% block body %}
+
+  {% if messages %}
+  <!-- <strong>Messages:</strong> -->
+  <div class="alert alert-primary mb-0" role="alert">
+    <ul>
+      {% for message in messages %}
+      <li>{{message}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <!-- Preloader -->
+  <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+
+  <!-- ##### Header Area Start ##### -->
+  <header class="header-area">
+
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+      
+        <div class="flex-row d-flex justify-content-between align-items-center">
+          <div class="p-2">
+            <!-- Logo Area -->
+            
+              <a href="/../">
+                <div class="neon-wrapper">
+                  <span class="txt" >StrangeFlix</span>
+                  <span class="gradient"></span>
+                  <span class="dodge"></span>
+             </div>
+
+              </a>
+              
+            
+          </div>
+          <div class="p-2">
+            <!-- Top Add Area -->
+              <div id=container>
+                Watch 
+                <div id=flip>
+                  <div><div>Action</div></div>
+                  <div><div>Thriller</div></div>
+                  <div><div>Everything</div></div>
+                </div>
+                Right here!
+              </div>
+          </div>
+        </div>
+      
+    </div>
+
+    <!-- Navbar Area -->
+    <div class="videomag-main-menu" id="sticker">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container-fluid">
+          <!-- Menu -->
+          <nav class="classy-navbar justify-content-between" id="videomagNav">
+
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Menu -->
+            <div class="classy-menu">
+
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <!-- Nav Start -->
+              <div class="classynav mt-2">
+                <ul>
+                  
+                  <li><a href="/category/">Videos</a></li>
+                  
+                  <li><a href="/videos/">Explore</a>
+                    <div class="megamenu">
+                      <ul class="single-mega cn-col-3">
+                        <h5>Bollywood</h5>
+                        <li><a href="category.html">Catagory</a></li>
+                        <li><a href="video-post.html">Video Post</a></li>
+                        <li><a href="single-post.html">Single Post</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        
+                      </ul>
+                      <ul class="single-mega cn-col-3">
+                        <h5>Hollywood</h5>
+                        <li><a href="catagory.html">Catagory</a></li>
+                        <li><a href="video-post.html">Video Post</a></li>
+                        <li><a href="single-post.html">Single Post</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        
+                      </ul>
+                      <ul class="single-mega cn-col-3">
+                        <h5>Kids Section</h5>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/category/">Catagory</a></li>
+                        <li><a href="video-post.html">Video Post</a></li>
+                        <li><a href="single-post.html">Single Post</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        
+                      </ul>
+                    </div>
+                  </li>
+                  
+                  {%if user.is_staff%}
+                  <li><a href="#">Upload Videos</a>
+                    <!-- Admin options for video upload -->
+                    <ul class="dropdown">
+                      <li><a href="/uploads/youtube/">YouTube Upload</a></li>
+                      <li><a href="/uploads/device">Device Upload</a></li>
+                      <li><a href="">Amazon S3</a></li>
+                    </ul>
+                  </li>
+                  {% endif %}
+                  <li><a href="/subscriptions">Membership</a></li>
+
+                  <li>
+                    <div class="top-search-area">
+                      <form action="#" method="post">
+                        <input type="search" name="top-search" id="topSearch" placeholder="Search">
+                        <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      </form>
+                    </div>
+                  </li>
+
+
+                  <!-- This is dynamic based on session of the user -->
+                  {% if user.is_authenticated %}
+                  {% else %}
+                  <li><a href="{% url 'account_login' %}">Log In</a></li>
+                  <li class="active"><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                  {% endif %}
+                  
+                </ul>
+              </div>
+               
+
+              <!-- Nav End -->
+            </div>
+
+            <!-- Top Profile Area -->
+            {% if user.is_authenticated %}
+            <div class="dropdown">  
+                
+              <a href="#" style="color: white;">
+                 Hello {{name}}   <!-- this has to be dynamic username -->
+                <i class="fa fa-address-book" data-toggle="dropdown"></i>
+                <span class="caret"></span>
+              </a>
+                  <!-- Anurag this content has to be dynamic for what were the latest things seen by the user -->
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="/profile">Account</a></li>
+                    <li><a href="">My favourite</a></li>
+                    <li><a href="{% url 'account_change_password' %}">Change password</a></li>
+                    <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+                  </ul>  
+            </div>
+            {% endif %}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ##### Header Area End ##### -->
+
+  {% block content %}
+  {% endblock %}
+  {% endblock %}
+  {% block extra_body %}
+  {% endblock %}
+
+  <!-- ##### Footer Area Start ##### -->
+  <footer class="footer-area section-padding-100">
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <!-- Footer Content -->
+        <div class="col-12 col-lg-4">
+          <div class="footer-content">
+            <!-- Logo -->
+            <a href="index.html" class="foo-logo"><img src="img/core-img/logo.png" alt=""></a>
+            <p>Follow Us On</p>
+            <div class="footer-social-info d-flex">
+              <a href="#"><i class="fa fa-pinterest"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Content -->
+        <div class="col-12 col-lg-7 col-xl-6">
+          <div class="footer-content d-flex flex-wrap">
+
+            <!-- Footer Nav -->
+            <div class="footer-nav">
+              <h5 class="widget-title">Explore</h5>
+              <nav>
+                <ul>
+                  <li><a href="#">Upcoming Series</a></li>
+                  <li><a href="#">Trailers</a></li>
+                  <li><a href="#">Songs</a></li>
+                  <li><a href="#">Ted Talks</a></li>
+                  <li><a href="#">Post Credit Scenes</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- Video Catagory -->
+            <div class="video-catagory">
+              <h5 class="widget-title">Video Categories</h5>
+              <ul>
+                <li><a href="#"><span>Action</span> <span>20</span></a></li>
+                <li><a href="#"><span>Drama</span> <span>10</span></a></li>
+                <li><a href="#"><span>Adventure</span> <span>71</span></a></li>
+                <li><a href="#"><span>Mystery</span> <span>15</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery-2.2.4 js -->
+  <script src="{% static 'js/jquery/jquery-2.2.4.min.js'%}"></script>
+  <!-- Popper js -->
+  <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'js/bootstrap/bootstrap.min.js'%}"></script>
+  <!-- All Plugins js -->
+  <script src="{% static 'js/plugins/plugins.js'%}"></script>
+  <!-- Active js -->
+  <script src="{% static 'js/active.js'%}"></script>
+</body>
+
+</html>

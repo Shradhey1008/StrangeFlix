@@ -1,0 +1,4 @@
+{% load i18n %}
+{% autoescape off %}
+{% blocktrans %}Dr. Strange does not like Your unconfirmed e-mail address. Please Confirm Your E-mail Address{% endblocktrans %}
+{% endautoescape %}
