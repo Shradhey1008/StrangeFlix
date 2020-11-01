@@ -41,12 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 'cloudinary',
+    # Social accounts
     'allauth.account',
     'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.google',
-    # 'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
     'crispy_forms',
+    # apps
     'home',
     'login',
     'signup',
@@ -105,10 +106,10 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'test2',
     'USER': 'postgres',
-    # 'PASSWORD': 'anurag',
+    'PASSWORD': 'anurag',
     # 'PASSWORD': 'pasword',
     'HOST':'localhost',
-    'PASSWORD': 'Smtwtfss1@',
+    # 'PASSWORD': 'Smtwtfss1@',
 }
 }
 
@@ -131,37 +132,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google': {
-#         'SCOPE': [
-#             'profile',
-#             'email',
-#         ],
-#         'AUTH_PARAMS': {
-#             'access_type': 'online',
-#         }
-#     },
-#     'facebook':
-#        {'METHOD': 'oauth2',
-#         'SCOPE': ['email','public_profile'],
-#         'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-#         'FIELDS': [
-#             'id',
-#             'email',
-#             'name',
-#             'first_name',
-#             'last_name',
-#             'verified',
-#             'locale',
-#             'timezone',
-#             'link',
-#             'gender',
-#             'updated_time'],
-#         'EXCHANGE_TOKEN': True,
-#         'LOCALE_FUNC': lambda request: 'kr_KR',
-#         'VERIFIED_EMAIL': False,
-#         'VERSION': 'v2.4'}
-# }
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    },}
+    
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

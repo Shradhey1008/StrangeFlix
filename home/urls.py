@@ -10,5 +10,5 @@ urlpatterns = [
     path('profile/',views.profile, name="profile"),
     path('profile/cancel/',cancelSubscription, name="cancel"),
     path('profile/pay/',views.pay, name="pay"),
-    path('videos/',views.Video,name = 'video')
+    # path('videos/',views.Video,name = 'video')
 ]

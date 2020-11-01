@@ -13,27 +13,31 @@ def CategoryList(request):
     return render(request,'category.html',context)
 
 def CategoryView(request,slug):
-    category_qs = Category.objects.filter(slug =slug)
-    print(category_qs)
+    category_qs = Category.objects.filter(slug=slug)
+    # print(category_qs)
     if category_qs.exists():
         category = category_qs.first()
-    print(category)
-
-    videos_qs = category.videos.all()
-    print(videos_qs)
+    else:
+        category = None
+    # print(category)
+    if category:
+        videos_qs = category.videos.all()
+    else:
+        videos_qs= None
+    # print(videos_qs)
     # categories = Video.objects.filter()
     context = {'objects':videos_qs}
     return render(request,'category_videos.html',context)
 
 def Category_video(request,category_slug,categoryvideo_slug,*args, **kwargs):
     category_qs = Category.objects.filter(slug = category_slug)
-    print(category_qs)
+    # print(category_qs)
     if category_qs.exists():
         category = category_qs.first()
-    print(category)
+    # print(category)
 
     videos_qs = category.videos.filter(slug = categoryvideo_slug)
-    print(videos_qs)
+    # print(videos_qs)
     if videos_qs.exists():
         video = videos_qs.first()
         global video_obj
@@ -65,5 +69,5 @@ def videoComments(request):
         content = request.POST.get('content')
         created_comment = Comment(post=video_obj,user=request.user,content=content)
         created_comment.save()
-    
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

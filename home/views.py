@@ -23,5 +23,5 @@ def profile(request):
 def pay(request):
     return render(request,'pay.html')
 
-def Video(request):
-    return render(request,'video.html')
+# def Video(request):
+#     return render(request,'video.html')

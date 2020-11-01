@@ -96,7 +96,7 @@ def updateTransactions(request, Subscription_id):
         pass
 
     messages.info(request, "Successfully created membership")
-    return redirect('/category')
+    return redirect('/')
 
 
 def cancelSubscription(request):

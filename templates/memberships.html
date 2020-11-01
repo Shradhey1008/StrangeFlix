@@ -8,12 +8,12 @@
     <div class="row">
         {% for object in objects %}
         <div class="col-sm-4 col-md-4">
-            <h2>{{object.membership_type}}</h2>
+            <h1>{{object.membership_type}}</h1>
             <p>Price: Rs.{{object.price}}<small>/month</small></p>
-            <h4>Included Categories</h4>
+            <h3>Included Categories</h3>
             <ul>
                 {% for categori in object.category_set.all  %}
-                <li>{{categori.title}}</li>
+                <li class="text-white">{{categori.title}}</li>
                 {% endfor %}
             </ul>
             <form method="POST" action='{% url 'subscriptions:plan' %}'>
@@ -21,7 +21,7 @@
                 {% if object.membership_type != current_membership %}
                 <button class="btn btn-warning">Select</button>
                 {% else %}
-                <small> This is Your current membership</small>
+                <h5> This is Your current membership</h5>
                 {% endif %}
                 <input type="hidden" name="membership_type" value="{{ object.membership_type }}">
 

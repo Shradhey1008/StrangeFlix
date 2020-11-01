@@ -12,17 +12,19 @@ import os
 
 
 def DeviceUpload(request):
-    videofiles = DeviceVideo.objects.order_by('title')
-    # Show most common tags
-    print([video.videofile.name for video in videofiles ])
-    common_tags = DeviceVideo.tags.most_common()[:4]
     form = DeviceVideoForm(request.POST, request.FILES)
     if form.is_valid():
         newvideo = form.save(commit=False)
         newvideo.slug = slugify(newvideo.title)
+        title = newvideo.title.replace(' ','_').replace("|","_").replace("?","_").replace("*","_").replace('"','_').replace(':','_')
+        newvideo.title = title
         newvideo.save()
         form.save_m2m()
 
+    videofiles = DeviceVideo.objects.order_by('title')
+    print([video.videofile.name for video in videofiles ])
+    # Show most common tags
+    common_tags = DeviceVideo.tags.most_common()[:4]
     context = {
         'videos': videofiles,
         'common_tags': common_tags,

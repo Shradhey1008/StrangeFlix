@@ -18,7 +18,7 @@
           <div class="single-blog-post style2">
             <div class="blog-thumb mb-30">
               <!-- <img src="{% static 'img/bg-img/42.jpg'%}" alt=""> -->
-              <p class='text-white'>  </p>
+              <p class='text-white'> </p>
               <video width='1000' height="500" controls>
                 <source src='{{ MEDIA_URL }}{{ objects.yt_video.ytubevideo }}' type='video/mp4'>
               </video>
@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="container">
       <class class="row">
         <!-- Post Details Content Area -->
@@ -68,38 +68,38 @@
                     ultrices velit, vehicula feugiat eros felis et magna. Etiam eu nibh ac ligula feugiat scelerisque at
                     ut
                     nisi. Cras id posuere nisi.</p> -->
-                    <p>{{ objects.yt_video.description }}</p>
-                    
-                  </div>
-                </div>
+                <p>{{ objects.yt_video.description }}</p>
+
               </div>
             </div>
-            
-            <!-- Comment Area Start -->
-            <div class="comment_area clearfix mb-100">
-              <h3 class="mb-50">Comments</h3>
-              
-              <ol>
-                <!-- Single Comment Area -->
-                <li class="single_comment_area">
-                  <!-- Comment Content -->
-                  <div class="comment-content d-flex">
-                    <!-- Comment Meta -->
-                    <div class="comment-meta text-white">
-                      <div class="d-flex">
-                        <a href="#" class="post-author text-white">Jane Smith</a>
-                        <a href="#" class="post-date text-white">July 11, 2018</a>
-                        <!-- <a href="#" class="reply text-white">Reply</a> -->
-                      </div>
-                      <p>Consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tinci dunt
-                        mi.
-                        Nullam vel orci dui. Su spendisse sit amet laoreet neque. Fusce sagittis sus cipit sem a
-                        consequat.
-                      </p>
-                    </div>
+          </div>
+        </div>
+
+        <!-- Comment Area Start -->
+        <div class="comment_area clearfix mb-100">
+          <h3 class="mb-50">Comments</h3>
+
+          <ol>
+            <!-- Single Comment Area -->
+            <li class="single_comment_area">
+              <!-- Comment Content -->
+              <div class="comment-content d-flex">
+                <!-- Comment Meta -->
+                <div class="comment-meta text-white">
+                  <div class="d-flex">
+                    <a href="#" class="post-author text-white">Jane Smith</a>
+                    <a href="#" class="post-date text-white">July 11, 2018</a>
+                    <!-- <a href="#" class="reply text-white">Reply</a> -->
                   </div>
-                  
-                  <!-- <ol class="children">
+                  <p>Consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat nulla placerat, tinci dunt
+                    mi.
+                    Nullam vel orci dui. Su spendisse sit amet laoreet neque. Fusce sagittis sus cipit sem a
+                    consequat.
+                  </p>
+                </div>
+              </div>
+
+              <!-- <ol class="children">
                     <li class="single_comment_area">
                       <div class="comment-content d-flex">
                         <div class="comment-meta">
@@ -115,75 +115,72 @@
                       </li>
                     </ol>
                   </li> -->
-                  
-                  <!-- Single Comment Area -->
-                  {% if comments %}
-                  {% for comment in comments %}
-                  <li class="single_comment_area">
-                    <!-- Comment Content -->
-                    <div class="comment-content d-flex">
-                      <!-- Comment Meta -->
-                      <div class="comment-meta">
-                        <div class="d-flex">
-                          <a href="#" class="post-author text-white">{{ comment.user.username }}</a>
-                          <a href="#" class="post-date text-white">{{ comment.date_posted }}</a>
-                          <!-- <a href="#" class="reply text-white">Reply</a> -->
-                        </div>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel tortor facilisis, volutpat
-                          nulla placerat, tincidunt mi. Nullam vel orci dui. Su spendisse sit amet laoreet neque. Fusce
-                          sagittis suscipit.</p> -->
-                          <p>{{ comment.content|safe }}</p>
-                        </div>
-                      </div>
-                    </li>
-                    {% endfor %}
-                  </ol>
+
+              <!-- Single Comment Area -->
+              {% if comments %}
+              {% for comment in comments %}
+            <li class="single_comment_area">
+              <!-- Comment Content -->
+              <div class="comment-content d-flex">
+                <!-- Comment Meta -->
+                <div class="comment-meta">
+                  <div class="d-flex">
+                    <a href="#" class="post-author text-white">{{ comment.user.username }}</a>
+                    <a href="#" class="post-date text-white">{{ comment.date_posted }}</a>
+                    <!-- <a href="#" class="reply text-white">Reply</a> -->
+                  </div>
+                  <p>{{ comment.content|safe }}</p>
                 </div>
-                {% else %}
-                <strong class="text-secondary">No comments yet...</strong>
-                {% endif %}
-                
-                <div class="post-a-comment-area mb-100 clearfix">
-                  <h3 class="mb-50">Leave a comment</h3>
-                  
-                  <!-- Reply Form -->
-                  <div class="contact-form-area">
-                    <form action="{% url 'category:video-comment' %}" method="POST">
-                      {% csrf_token %}
-                      <div class="row">
-                        <!-- <div class="col-12 col-lg-6">
+              </div>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+        {% else %}
+        <strong class="text-secondary">No comments yet...</strong>
+        {% endif %}
+
+        <div class="post-a-comment-area mb-100 clearfix">
+          <h3 class="mb-50">Leave a comment</h3>
+
+          <!-- Reply Form -->
+          <div class="contact-form-area">
+            <form action="{% url 'category:video-comment' %}" method="POST">
+              {% csrf_token %}
+              <div class="row">
+                <!-- <div class="col-12 col-lg-6">
                           <input type="text" class="form-control" id="name" placeholder="Your Name*" required>
                         </div>
                         <div class="col-12 col-lg-6">
                           <input type="email" class="form-control" id="email" placeholder="Your Email*" required>
                         </div> -->
-                        <div class="col-12">
-                          <textarea name="content" class="form-control" id="message" cols="50" rows="10" placeholder="Message*"
-                          required></textarea>
-                        </div>
-                        <div class="col-12">
-                          <button class="btn videomag-btn mt-30" type="submit">Submit Comment</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                <div class="col-12">
+                  <textarea name="content" class="form-control" id="message" cols="50" rows="10" placeholder="Message*"
+                    required></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn videomag-btn mt-30" type="submit">Submit Comment</button>
                 </div>
               </div>
-            </class>
-            {% else %}
-            <div class="alert alert-danger" role="alert">
-              Cannot Watch this Video! Upgrade Membership
-            </div>
-            {% endif %}
-            
-            
-            
-            
-            
+            </form>
           </div>
         </div>
-      </section>
-      
-      {% endblock %}
-      {% block extra_body %}
-      {% endblock %}
+    </div>
+    </class>
+    {% else %}
+    <div class="alert alert-danger" role="alert">
+      Cannot Watch this Video! Upgrade Membership
+    </div>
+    {% endif %}
+
+
+
+
+
+  </div>
+  </div>
+</section>
+
+{% endblock %}
+{% block extra_body %}
+{% endblock %}
