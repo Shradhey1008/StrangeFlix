@@ -32,4 +32,8 @@ secs, playback rate, quality, turn on/off captions etc.
 
 ## Glimpses ##
 ![Screenshot (297)](https://user-images.githubusercontent.com/58984405/97810120-90358c80-1c97-11eb-8cee-718905e810e5.png)
-
+##
+![Screenshot (298)](https://user-images.githubusercontent.com/58984405/97810222-603ab900-1c98-11eb-8d37-a7a420aa752e.png)
+##
+![Screenshot (299)](https://user-images.githubusercontent.com/58984405/97810225-63ce4000-1c98-11eb-856c-be4eb857b226.png)
+##
