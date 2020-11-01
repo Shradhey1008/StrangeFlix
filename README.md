@@ -29,3 +29,7 @@ watched by user.
 5. Auto play all the videos in a playlist.
 6. The video player can be made advanced with many other features like skip ads, skip +10/-10
 secs, playback rate, quality, turn on/off captions etc.
+
+## Glimpses ##
+![Screenshot (297)](https://user-images.githubusercontent.com/58984405/97810120-90358c80-1c97-11eb-8cee-718905e810e5.png)
+
